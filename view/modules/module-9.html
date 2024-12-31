@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/aside.css" />
+    <link rel="stylesheet" href="/css/module.css" />
+
+    <title>الوحده التاسعه</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="container-xxl d-flex align-items-start">
+        <aside
+          class="bg-main-color text-white rounded-top p-1 py-sm-3 px-sm-1 d-none d-md-block"
+        >
+          <div class="accordion" id="accordionExample">
+            <h3 class="ms-4">
+              <a
+                href="#main-goals"
+                class="text-white text-decoration-none aside-button"
+                data-link="main-goals"
+                >الأهداف</a
+              >
+            </h3>
+
+            <div class="accordion-item accordion-content">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  الموضوعات
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body p-1 p-md-2 p-lg-3">
+                  <ul>
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#manipulating"
+                        data-link="manipulating"
+                        >لغة التعامل مع البياناتlanguage data Manipulating</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#insert"
+                        data-link="insert"
+                        >إضافة سجل أو عدد من السجلات الى جدول معين insert
+                        into</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#add-rules"
+                        data-link="add-rules"
+                        >القواعد التى يجب التقيد بها عند اضافة سجل</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#null"
+                        data-link="null"
+                        >إضافة قيمة فارغة ( null) الى عمود:</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#edit"
+                        data-link="edit"
+                        >التعديل فى بيانات سجل أو سجلات معينة داخل جدول (update)
+                      </a>
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#edit-rules"
+                        data-link="edit-rules"
+                        >القواعد التى يجب التقيد بها عند التعديل:</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#delete"
+                        data-link="delete"
+                        >حذف سجل أو سجلات معينة داخل جدول (delete from)</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#delete-rule"
+                        data-link="delete-rule"
+                        >القواعد التى يجب التقيد بها عند الحذف:
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="m-4">
+              <a
+                href="#show-activity"
+                class="text-white text-decoration-none aside-button"
+                data-link="show-activity"
+                >الأنشطة</a
+              >
+            </h4>
+          </div>
+        </aside>
+
+        <div class="content flex-grow-1 ps-1 ps-md-4">
+          <section id="main-goals" class="aside-section" data-link="main-goals">
+            <div class="main-goals">
+              <h2 class="text-center mb-4">
+                التعامل مع البيانات Manipulating data
+              </h2>
+              <div class="mb-4">
+                <h3 class="mb-3">الهدف العام:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  معرفه لغه التعامل مع البيانات داخل الجداول (اضافه-تعديل-حذف )
+                </p>
+              </div>
+
+              <div>
+                <h3 class="mb-3">الاهداف السلوكية:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  فى نهاية هذا الفصل لابد ان يكون الطالب قادرا على :
+                </p>
+                <ol class="mb-0 ms-5 fs-5">
+                  <li>
+                    ان يضيف سجل أو عدد من السجلات الى جدول معين insert into
+                  </li>
+                  <li>ان يضيف قيمة فارغة ( null) الى عمود:</li>
+                  <li>
+                    ان يقوم بالتعديل فى بيانات سجل أو سجلات معينة داخل جدول
+                    (update)
+                  </li>
+                  <li>
+                    ان يقوم بحذف سجل أو سجلات معينة داخل جدول (delete from)
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="manipulating"
+            class="aside-section"
+            data-link="manipulating"
+          >
+            <h3>أولا: لغة التعامل مع البياناتlanguage data Manipulating</h3>
+
+            <p class="ps-4 fs-5">
+              لقد قمنا فى الفصول السابقة بشرح جملة الاستعلام select والتى تمكننا
+              من عرض أى بيانات من جدول أو من عدة جداول بالشكل المطلوب، وفى هذا
+              الفصل سوف نتعرف على قسم مهم جدا من أقسام لغة SQL وهو لغة التعامل
+              مع البيانات، وهذه اللغة تمكننا من التعامل مع البيانات داخل
+              الجداول، حيث يتم من خلالها اضافة سجل أو سجلات (rows) جديدة الى
+              الجدول أو التعديل فى سجل أو سجلات معينة أو حذف سجل او سجلات معينة.
+              وتتكون لغة التعامل مع البيانات من عدة جمل وهى كالتالى: - جملة
+              اضافة بيانات الى الجدول insert into. - جملة التعديل فى بيانات
+              الجدول update. - جملة حذف بيانات من الجدول. وسوف نقوم بشرح كل جملة
+              من هذه الجمل بالتفصيل فى هذا الفصل.
+            </p>
+          </section>
+
+          <section id="insert" class="aside-section" data-link="insert">
+            <h3>إضافة سجل أو عدد من السجلات الى جدول معين insert into</h3>
+
+            <p class="ps-4 fs-5 mb-5">
+              إضافة سجل أو سجلات جديدة الى جدول هى عملية اضافة بيانات جديدة الى
+              جدول معين عن طريق استخدام جملة الاضافة insert into الصيغة العامة
+              لإضافة سجلات جديدة الى جدول:
+              <img src="\assets\images\insert.jpg" />
+              شرح الشكل العام: - جدول: اسم الجدول المطلوب إضافة سجلات فيه. -
+              (عمود1،عمود2،عمود3،.......): أسماء الأعمدة المطلوب ادخال البيانات
+              اليها. - (قيمة1، قيمة2،قيمة3،......): القيم المطلوب إضافتها الى
+              الأعمدة.
+            </p>
+          </section>
+
+          <section id="add-rules" class="aside-section" data-link="add-rules">
+            <h3>القواعد التى يجب التقيد بها عند الإضافة:</h3>
+
+            <div class="example-1">
+              <p class="ps-4 fs-5">
+                (1): يجب أن يكون عدد القيم التى سيتم ادخالها مساويا لعدد الأعمدة
+                المذكورة فى جملة insert..
+              </p>
+            </div>
+            <div class="example-2">
+              <p class="ps-4 fs-5">
+                (2):يجب أن تكون القيم مرتبة بنفس ترتيب الأعمدة المراد إدخال
+                القيم اليها، حيث أن القيمة1 سوف تسجل فى العمود1 وهكذا، كما يجب
+                أن تكون القيم أيضا من نفس نوع بيانات الأعمدة.
+              </p>
+            </div>
+            <div class="example-3">
+              <p class="ps-4 fs-5">
+                (3):- عند إدخال قيم التاريخ والنصوص لابد من وضعها داخل علامتى
+                تنصيص فرديتين ' '.
+              </p>
+            </div>
+            <div class="example-4">
+              <p class="ps-4 fs-5">
+                (4):يجب إدخال قيما للأعمدة التى لاتقبل قيما فارغة مثل أعمدة
+                المفتاح الأساسي.
+              </p>
+            </div>
+            <div class="example-5">
+              <p class="ps-4 fs-5">
+                (5):يجوز عدم ذكر أسماء الأعمدة فى جملة insert وفى هذه الحالة
+                لابد من إدخال جميع قيم الأعمدة الموجودة فى الجدول حسب ترتيب
+                الأعمدة داخل الجدول مع مراعاة نوع البيانات لكل عمود.
+              </p>
+            </div>
+            <p class="ps-4 fs-5">
+              ملحوظة: يمكن عرض أسماء الأعمدة ونوع بياناتها داخل جدول معين
+              باستخدام الأمر (DESC table)
+            </p>
+            <img src="\assets\images\2.jpg" />
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم إضافة مستخدم جديد برقم (3) والايميل والاسم
+              وكلمة المرور، ونلاحظ أن الحقل الأول لم ندخل به الرقم 3 ولكن وضعنا
+              القوسين ' ' لان الحقل عبارة عن مفتاح أساس يضاف بشكل اتوماتيكى.
+            </p>
+          </section>
+
+          <section id="null" class="aside-section" data-link="null">
+            <h3>إضافة قيمة فارغة ( null) الى عمود:</h3>
+
+            <p class="ps-4 fs-5">يتم إضافة القيمة null الى الأعمدة بطريقتين:</p>
+
+            <ol class="fw-bold">
+              <li>
+                الاولى: عدم كتابة الأعمدة المراد تسجيل القيمة null بها فى الجزء
+                insert.
+              </li>
+              <li>
+                الثانية: أن نكتب الأعمدة ولكن نكتب قيمتها null داخل الجزء
+                values.
+              </li>
+              <p class="ps-4 fs-5">
+                بشرط أن تقبل الأعمدة هذه القيمة اى انها ليست عليها قيود مثلا
+                (primary key) كما فى المثال التالى
+              </p>
+            </ol>
+
+            <p class="fs-5">
+              مثال(2): اضافة سجل جديد الى جدول المستخدمين يحتوى على الايميل
+              والاسم فقط دون كلمة المرور.
+            </p>
+            <img src="\assets\images\3.jpg" />
+
+            <p class="fs-5">
+              هناك طريقة أخرى لادخال البيانات داخل جدول باستخدام
+            </p>
+
+            <p class="fs-5">insert……set ……</p>
+            <p class="fs-5">
+              insert into users set email = 'hoba@yahoo.com', name = 'hoba',
+              password ='hobapass';
+            </p>
+            <p class="fs-5">وهناك طريقة ثالثة :</p>
+            <p class="fs-5">
+              ;insert into users values ('hoba@yahoo.com', 'hoba', 'hobapass')
+            </p>
+          </section>
+
+          <section id="edit" class="aside-section" data-link="edit">
+            <h3>التعديل فى بيانات سجل أو سجلات معينة داخل جدول (update)</h3>
+
+            <p class="ps-4 fs-5">
+              التعديل فى سجل أو سجلات معينة داخل جدول هى عملية تعديل بيانات عمود
+              او عدة أعمدة عن طريق استخدام جملة التعديل update.
+            </p>
+
+            <p class="ps-4 fs-5">الصيغة العامة لتعديل البيانات داخل الجدول:</p>
+            <img src="\assets\images\4.jpg" />
+
+            <p class="ps-4 fs-3 fw-bold">شرح الشكل العام:</p>
+            <p class="ps-4 fs-5">- جدول: اسم الجدول المطلوب تعديل سجلات فيه.</p>
+            <p class="ps-4 fs-5">
+              - عمود1،عمود2: اسماء الاعمدة المطلوب التعديل فيها.
+            </p>
+            <p class="ps-4 fs-5">
+              - قيمة1، قيمة2: القيم الجديدة المراد وضعها بدلا من القيم القديمة.
+            </p>
+            <p class="ps-4 fs-5">
+              - شرط: شرط لاختيار سجلات معينة للتعديل فيها، وبدون هذا الشرط فسوف
+              يتم التعديل فى جميع السجلات.
+            </p>
+          </section>
+
+          <section id="edit-rules" class="aside-section" data-link="edit-rules">
+            <h3>القواعد التى يجب التقيد بها عند التعديل:</h3>
+            <p class="ps-4 fs-5">
+              - يجب أن يكون نوع البيانات الجديدة من نفس نوع بيانات الأعمدة
+              المطلوب التعديل فيها.
+            </p>
+            <p class="ps-4 fs-5">
+              - عند تعديل قيم التاريخ أو النصوص يجب وضع القيم الجديدة بين علامتى
+              التنصيص الفردية ' '.
+            </p>
+            <p class="ps-4 fs-5">
+              - يجب أخذ الحذر عند كتابة الجزء where فى جملة التعديل لتحديد أى
+              الصفوف التى سوف يتم التعديل فيها.
+            </p>
+            <p class="ps-4 fs-5">
+              مثال(3): تعديل كلمة المرور لتصبح eman بدلا من قيمة فارغة:
+            </p>
+            <img src="\assets\images\5.jpg" />
+
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم تعديل كلمة المرور الى eman بدلا من قيمة فارغة
+              باستخدام أمر التعديل (update…..set….) فى جدول المستخدمين، ولاحظ
+              اختيار اسم المستخدم 4 باستخدام الجزء where، ماذا يحدث لو لم نحدد
+              رقم المستخدم 4؟ أى ماذا يحدث لو ألغينا جملة الشرط where من المثال
+              السابق؟
+            </p>
+            <p class="ps-4 fs-5">
+              عند عدم كتابة الشرط فى عملية التعديل أى لم يتم تحديد الصف المراد
+              التعديل فيه فانه يتم التعديل فى جميع الصفوف كما فى المثال التالى:
+            </p>
+            <img src="\assets\images\6.jpg" />
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم تعديل كلمات المرور فى جميع السجلات الى eman،
+              لذلك لابد من الحذر عند التعديل فى صف معين فلابد من تحديد الصف
+              المراد التعديل فيه باستخدام الجزء where.
+            </p>
+          </section>
+
+          <section id="delete" class="aside-section" data-link="delete">
+            <h3>حذف سجل أو سجلات معينة داخل جدول (delete from)</h3>
+
+            <p class="ps-4 fs-5">
+              حذف سجل أو سجلات معينة داخل جدول هى عملية إلغاء بيانات عمود أو عدة
+              أعمدة عن طريق استخدام جملة الحذف delete from.
+            </p>
+            <p class="ps-4 fs-5">الصيغة العامة لحذف البيانات من الجدول:</p>
+            <img src="\assets\images\7.jpg" />
+            <p class="ps-4 fs-5">شرح الشكل العام:</p>
+            <p class="ps-4 fs-5">
+              - جدول: اسم الجدول المطلوب حذف سجل أو سجلات منه.
+            </p>
+            <p class="ps-4 fs-5">
+              - شرط: شرط لاختيار سجلات معينة لحذفها، وبدون هذا الشرط فسوف يتم
+              حذف جميع السجلات
+            </p>
+          </section>
+
+          <section
+            id="delete-rule"
+            class="aside-section"
+            data-link="delete-rule"
+          >
+            <h3>القواعد التى يجب التقيد بها عند الحذف:</h3>
+            <p class="ps-4 fs-5">
+              - يجب الحذر عند كتابة الجزء where فى جملة الحذف لتحديد اى الصفوف
+              التى سوف يتم حذفها، عندما لانكتب جزء الشرط فى جملة الحذف فانه يتم
+              حذف جميع صفوف الجدول كاملة.
+            </p>
+            <p class="ps-4 fs-5">
+              مثال (4): حذف المستخدم رقم (4) من جدول المستخدمين:
+            </p>
+            <img src="\assets\images\8.jpg" />
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم حذف المستخدم رقم (4) من جدول المستخدمين، اى
+              انه تم حذف صف كامل من الجدول
+            </p>
+            <p class="ps-4 fs-5">
+              مثال (5): حذف جميع الموظفين من جدول الموظفين:
+            </p>
+            <img src="\assets\images\9.jpg" />
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم حذف جميع الصفوف من جدول الموظفين وذلك لعد
+              تحديد الصف أو الصفوف المراد حذفها اى اننا لم نكتب جملة الشرط where
+              فى المثال السابق.
+            </p>
+            <p class="ps-4 fs-5">
+              تنبيه: الرجاء عدم تنفيذ الأمر السابق للمحافظة على بيانات الجدول،
+              واذا كنت قد فعلت فاكتب الامر ROLLBACK لاسترجاع البيانات.
+            </p>
+          </section>
+
+          <section
+            id="show-activity"
+            class="aside-section"
+            data-link="show-activity"
+          ></section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/module.js" type="module"></script>
+  </body>
+</html>

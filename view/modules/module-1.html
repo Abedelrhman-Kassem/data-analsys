@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/aside.css" />
+    <link rel="stylesheet" href="/css/module.css" />
+
+    <title>الوحده الاولي</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="container-xxl d-flex align-items-start">
+        <aside
+          class="bg-main-color text-white rounded-top p-1 py-sm-3 px-sm-1 d-none d-md-block"
+        >
+          <div class="accordion" id="accordionExample">
+            <h3 class="ms-4">
+              <a
+                href="#main-goals"
+                class="text-white text-decoration-none aside-button"
+                data-link="main-goals"
+                >الأهداف</a
+              >
+            </h3>
+
+            <div class="accordion-item accordion-content">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  الموضوعات
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body p-1 p-md-2 p-lg-3">
+                  <ul>
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#general-formula"
+                        data-link="general-formula"
+                        >مفهوم قواعد البيانات data concept :
+                      </a>
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#reqiurments"
+                        data-link="reqiurments"
+                        >مراحل تطور قواعد البيانات :</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#select"
+                        data-link="select"
+                        >أنواع أنظمة ادارة قواعد البيانات :
+                      </a>
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#alias"
+                        data-link="alias"
+                        >قواعد البيانات العلاقية :</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#math"
+                        data-link="math"
+                        >التعامل مع قواعد البيانات العلاقية :</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#operator-precedence"
+                        data-link="operator-precedence"
+                        >لغة الاستفسارات SQL ؟</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="ms-4">
+              <a
+                href="#show-activity"
+                class="text-white text-decoration-none aside-button"
+                data-link="show-activity"
+                >الأنشطة</a
+              >
+            </h4>
+          </div>
+        </aside>
+
+        <div class="content flex-grow-1 ps-1 ps-md-4">
+          <section id="main-goals" class="aside-section" data-link="main-goals">
+            <div class="main-goals">
+              <h2 class="text-center mb-4">مفهوم قواعد البيانات</h2>
+              <div class="mb-4 mt-">
+                <h3 class="mb-3">الهدف العام:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  معرفة ماهى قواعد البيانات ومراحل تطورها وأنواعها.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="mb-3">الاهداف السلوكية:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  فى نهاية هذا الفصل لابد ان يكون الطالب قادرا على :
+                </p>
+                <ol class="mb-0 ms-5 fs-5">
+                  <li>تشرح مفهوم قواعد البيانات.</li>
+                  <li>تعدد مراحل تطور قواعد البيانات.</li>
+                  <li>تعدد أنواع أنظمة قواعد البيانات.</li>
+                  <li>تشرح قواعد البيانات العلاقية.</li>
+                  <li>تتعامل مع قواعد البيانات العلاقية.</li>
+                  <li>تشرح لغة التعامل مع قواعد البياناتSQL.</li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="general-formula"
+            class="aside-section"
+            data-link="general-formula"
+          >
+            <h3>مفهوم قواعد البيانات: data concept</h3>
+            <p class="ps-4 fs-5">
+              نفرض أننا نريد جمع البيانات عن الطلاب فى كلية معينة،<br />
+              فانه من المعروف ان لكل طالب بيانات مثل ( رقم الطالب الاكاديمى، اسم
+              الطالب، القسم الذى ينتمى اليه، الشعبة......الخ)،<br />
+              فلو جمعنا بيانات كل طالب فى بطاقة وسميناها (سجل الطالب Record) وكل
+              بيان من بيانات الطالب فى هذا السجل سميناه(حقل Field) معنى ذلك اننا
+              سوف نحصل على سجلات للطلاب، <br />
+              عند جمع هذه السجلات مع بعضها نحصل على قاعدة بيانات للطلاب تسمى
+              data base.
+            </p>
+          </section>
+
+          <section
+            id="reqiurments"
+            class="aside-section"
+            data-link="reqiurments"
+          >
+            <h3>مراحل تطور قواعد البيانات :</h3>
+
+            <p class="ps-4 fs-5">
+              لقد مرت عملية التعامل مع البيانات وكيفية تخزينها ومعالجتها بمراحل
+              عديدة من قبل علماء قواعد البيانات فقد تم وضع نظريات وأساليب كثيرة
+              للتعامل مع البيانات، ومنها على سبيل المثال الاتى: <br />
+            </p>
+            <li>
+              حفظ البيانات فى بطاقات نشر الكترونية electronic spread sheets :
+            </li>
+            <li>
+              تعتمد هذه الطريقة على حفظ البيانات داخل بطاقات الكترونية يتم
+              التعامل معها بشكل معين وتعتبر من اقدم الاساليب للتعامل مع
+              البيانات.
+            </li>
+            <li>حفظ البيانات فى ملفات تسمى مخازن معبأة Filling cabinet :</li>
+            <li>
+              تعتمد هذه الطريقة على تخزين البيانات فى ملفات ليتم التعامل، وتعتبر
+              ايضا من الاساليب القديمة للتعامل مع قواعد البيانات. <br />
+            </li>
+            <li>
+              حفظ البيانات فى قواعد البيانات Database وتعتبر هذه الطريقة هى
+              الاحدث بالنسبة للطرق السابقة حيث تم عمل أنظمة للتعامل مع قواعد
+              البيانات لتسهيل عملية تخزين البيانات واسترجاعها والتعديل فيها
+              بسهولة ودقة ( معالجتها) وتسمى هذه الانظمة أنظمة إدارة قواعد
+              البيانات Database mangment system (DBMS)
+            </li>
+          </section>
+
+          <section id="select" class="aside-section" data-link="select">
+            <h3>أنواع أنظمة ادارة قواعد البيانات :</h3>
+
+            <div class="ps-4 fs-5">
+              <ul>
+                <li>
+                  <h4>نظام ادارة قواعد البيانات الهرمية(Hierarchical):</h4>
+                  <p class="fs-5">
+                    هذا النظام كان يستخدم فى الماضى وبخاصة مع أجهزة الحاسب
+                    الكبيرة التى يطلق عليها main frame حيث كان هذا النظام يتناسب
+                    معها بشكل جيد.
+                  </p>
+                </li>
+
+                <li>
+                  <h4>نظام ادارة قواعد البيانات الشبكية(Network):</h4>
+                  <p class="fs-5">
+                    ظهر هذا النظام الهرمى وبخاصة بعد التوسع فى أنظمة الشبكات
+                    ولكن كان هناك صعوبات كثيرة فى عملية فهم وطبيعة التعامل مع
+                    البيانات كما فى النظام الهرمى.
+                  </p>
+                </li>
+
+                <li>
+                  <h4>نظام ادارة قواعد البيانات العلاقية(Relational):</h4>
+                  <p class="fs-5">
+                    يعتبر هذا النظام هو النظام الذى تعتمد عليه اغلب برامج قواعد
+                    البيانات مثل الاوراكل لأنه من أقوى أنظمة قواعد البيانات
+                    لقدرته على استيعاب كميات كبيرة من البيانات دون التأثير على
+                    أدائه من حيث السرعة والدقة، ولأن هذا النظام يتمتع بالسرية
+                    والأمان لاحتوائه على نظام اعطاء الصلاحيات والحقوق لمستخدميه
+                    ولسهولته فى الاستخدام والفهم وسهولة برمجة تطبيقاته.
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <img
+              src="/assets/images/rel.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+          </section>
+
+          <section id="alias" class="aside-section" data-link="alias">
+            <h3>قواعد البيانات العلاقية :</h3>
+
+            <p class="ps-4 fs-5">
+              تعتمد قواعد البيانات العلاقية على جمع البيانات فى جداول بسيطة
+              ثنائية الابعاد يسهل فهمها تتكون من صفوف وأعمدة ،<br />
+              كل عمود فى الجدول عبارة عن حقل (field) وكل صف من صفوف هذه الجداول
+              عبارة عن سجل (Record) وتم ربط هذه الجداول مع بعضها بروابط تسمى
+              Relations ومن هنا جاءت تسمية قواعد البيانات العلاقية.<br />
+              فقواعد البيانات العلاقية هى مجموعة من الجداول التى لها علاقة ما
+              ببعضها والشكل رقم(2) يبين جدولين احدهما يمثل بيانات الادارات
+              والاخر يمثل بيانات الموظفين والعلاقة بين الجدولين تمثلت فى وجود
+              العمود (DEPTNO) فى كلا الجدولين.ٍ
+            </p>
+          </section>
+
+          <section id="math" class="aside-section" data-link="math">
+            <h3>التعامل مع قواعد البيانات العلاقية :</h3>
+
+            <p class="ps-4 fs-5">
+              قامت شركة اوراكل باعتماد لغة تسمى لغة الاستفسارات SQL للتعامل مع
+              قواعد البيانات العلاقية <br />
+              وهى لغة سهلة تقوم بانشاء الاشياء (Objects) الخاصة بقاعدة البيانات
+              مثل الجداول والتعامل معها وتقوم بعمل جميع الاستفسارات اللازمة
+              والتى نريد ان نعرفها من قاعدة البيانات ويطلق عليها لغة SQL .
+            </p>
+          </section>
+
+          <section
+            id="operator-precedence"
+            class="aside-section"
+            data-link="operator-precedence"
+          >
+            <h3>لغة الاستفسارات SQL ؟</h3>
+
+            <p class="ps-4 fs-5">
+              هي اختصار لكلمة Structured Query Language وتعمل مع جميع برامج
+              قواعد البيانات مثل : <br />
+              MS Access, MS SQL Server, DB2, Oracle, Sybase, MySQL
+              <br />
+            </p>
+            <h4>ما الذي سوف استفيده من تعلم SQL ؟</h4>
+            <p class="ps-4 fs-5">
+              إدارة قواعد بياناتك بصورة أفضل , أقوى و بشكل احترافي . <br />
+              و إن كان أطلق علي هذه التقنية ( لغة ) باستخدام اللفظ المفرد إلا
+              إنها تتضمن داخلها لغتان لكل منها وظائف محددة تقوم بها تختلف عن
+              الأخرى تماما.<br />
+              إذا ذكرت قواعد البيانات انصرف الذهن مباشرة إلي الجداول إذ أن
+              الجداول هي الكائن الأول و الرئيسي في قواعد البيانات ثم تليه باقي
+              الكائنات المكونة لهيكل قواعد البيانات. <br />
+            </p>
+            <h4>
+              إذا نظرنا إلي قواعد البيانات نجد إنها تتكون من جزئين رئيسيين :-
+            </h4>
+            <p class="ps-4 fs-5"></p>
+
+            <ol class="ps-4 fs-5">
+              <li>
+                هيكل قاعدة البيانات Structure : و هي مجموعة الكائنات المكون
+                للقاعدة مثل الجداول و الإستعلامات .
+              </li>
+              <li>
+                البيانات Data التي يتعامل معها المستخدم بالاضافة و الحذف و
+                التعديل .
+              </li>
+            </ol>
+          </section>
+
+          <section
+            id="show-activity"
+            class="aside-section"
+            data-link="show-activity"
+          ></section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/module.js" type="module"></script>
+  </body>
+</html>

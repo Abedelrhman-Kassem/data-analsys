@@ -1,0 +1,88 @@
+#connect h2 {
+  font-size: 28px;
+  font-family: arial;
+  margin-right: 40px;
+  margin-left: 20px;
+}
+
+#connect .info {
+  text-align: center;
+}
+
+#connect .info h1 {
+  font-size: 38px;
+  font-family: arial;
+  color: #076890;
+}
+
+#connect .info p {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: arial;
+}
+
+#connect .form {
+  padding: 50px;
+  margin: 50px auto;
+  font-family: arial;
+}
+
+legend {
+  font-size: 28px;
+  font-family: arial;
+  font-weight: bold;
+  color: #076890;
+
+  position: relative;
+  background-color: white;
+  width: fit-content;
+  padding: 10px 30px;
+
+  float: none !important;
+}
+
+fieldset {
+  padding: 10px;
+  margin-top: -70px;
+  border: 2px solid #076890;
+  text-align: center;
+  font-family: arial;
+
+  position: relative;
+}
+
+fieldset .input input {
+  padding: 15px;
+  margin: 20px auto;
+  width: 250px;
+  border: 2px solid #076890;
+  text-align: center;
+  font-size: 18px;
+  font-family: arial;
+}
+
+fieldset .input textarea {
+  border: 2px solid #076890;
+  display: block;
+  margin: 10px auto;
+  font-size: 18px;
+  font-family: arial;
+  text-align: center;
+}
+
+fieldset .button {
+  flex-basis: 45%;
+  background: #076890;
+  color: #fff;
+  margin-top: 20px;
+  width: 50%;
+  height: 50px;
+  border-radius: 20px;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  cursor: pointer;
+  transition: background 1s;
+  font-family: "Tajawal", sans-serif;
+  font-weight: bold;
+}

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/aside.css" />
+    <link rel="stylesheet" href="/css/module.css" />
+
+    <title>الوحده الخامسه</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="container-xxl d-flex align-items-start">
+        <aside
+          class="bg-main-color text-white rounded-top p-1 py-sm-3 px-sm-1 d-none d-md-block"
+        >
+          <div class="accordion" id="accordionExample">
+            <h3 class="ms-4">
+              <a
+                href="#main-goals"
+                class="text-white text-decoration-none aside-button"
+                data-link="main-goals"
+                >الأهداف</a
+              >
+            </h3>
+
+            <div class="accordion-item accordion-content">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  الموضوعات
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body p-1 p-md-2 p-lg-3">
+                  <ul>
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#Group-functions"
+                        data-link="Group-functions"
+                        >الدوال التجميعية لأكثر من صف Group functions</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#collected-functions"
+                        data-link="collected-functions"
+                        >أنواع الدوال التجميعية</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#collected-functions-ex"
+                        data-link="collected-functions-ex"
+                        >أمثلة على الدوال التجميعية</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#count"
+                        data-link="count"
+                        >التعامل مع الدالة COUNT</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#Group-by"
+                        data-link="Group-by"
+                        >اإنشاء مجموعات من البيانات باستخدام الجزء Group by</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#Having"
+                        data-link="Having"
+                        >جملة الشرط المستخدمة مع الدوال التجميعية Having</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="m-4">
+              <a
+                href="#show-activity"
+                class="text-white text-decoration-none aside-button"
+                data-link="show-activity"
+                >الأنشطة</a
+              >
+            </h4>
+          </div>
+        </aside>
+
+        <div class="content flex-grow-1 ps-1 ps-md-4">
+          <section id="main-goals" class="aside-section" data-link="main-goals">
+            <div class="main-goals">
+              <h2 class="text-center mb-4">الدوال التجميعية لأكثر من صف</h2>
+              <div class="mb-4">
+                <h3 class="mb-3">الهدف العام:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  تمكين الطالب من استخدام الدوال التجميعية لتحليل البيانات
+                  واستخلاص معلومات إحصائية من الجداول
+                </p>
+              </div>
+
+              <div>
+                <h3 class="mb-3">الاهداف السلوكية:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  فى نهاية هذا الفصل لابد ان يكون الطالب قادرا على :
+                </p>
+                <ol class="mb-0 ms-5 fs-5">
+                  <li>
+                    أن يقوم الطالب بحساب مجموع قيم عمود معين باستخدام دالة SUM.
+                  </li>
+                  <li>
+                    أن يحدد الطالب القيمة الكبرى والصغرى في عمود معين باستخدام
+                    دالتي MAX وMIN.
+                  </li>
+                  <li>
+                    أن يستخدم الطالب دالة COUNT لعدّ السجلات في جدول معين.
+                  </li>
+                  <li>
+                    أن يفهم الطالب كيفية دمج الدوال التجميعية مع شروط لتحديد
+                    نتائج دقيقة.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="Group-functions"
+            class="aside-section"
+            data-link="Group-functions"
+          >
+            <h3>أولا: الدوال التجميعية لأكثر من صف Group functions</h3>
+
+            <p class="fs-5 d-flex mb-2">
+              هى دوال تتعامل مع بيانات مجموعة من الصفوف لإخراج قيمة واحدة فقط،
+              فمثلا إذا أردنا ايجاد مجموع مايأخذه الموظفون من رواتب فإننا نستخدم
+              دالة من دوال التجميعية تسمى sum وهذه الدالة تقوم بعملية جمع
+              للرواتب وتكون نتيجتها قيمة واحدة فقط وهى المجموع.
+            </p>
+
+            <img
+              src="/assets/images/group-function.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <p class="fs-5 d-flex mb-2">
+              كما هو واضح من الشكل أن دالة sum قامت بجمع كل الرواتب لإخراج قيمة
+              واحدة فقط وهى (9232)
+            </p>
+            <p class="fs-5 d-flex mb-2">
+              وبالمثل عندما نريد ايجاد أكبر راتب من بين رواتب الموظفين فهناك
+              أيضا دالة من بين الدوال التجميعية تقوم بعمل ذلك
+            </p>
+            <p class="fs-5 d-flex mb-2">
+              ، اى ان هذا النوع من الدوال يتعامل مع أكثر من صف لإخراج قيمة واحدة
+              فقط.
+            </p>
+          </section>
+
+          <section
+            id="collected-functions"
+            class="aside-section"
+            data-link="collected-functions"
+          >
+            <h3>ثانيا: أنواع الدوال التجميعية</h3>
+
+            <p class="ps-4 fs-5">
+              الجدول التالى يبين أنواع الدوال التجميعية ووظيفة كل دالة. وجميع
+              هذه الدوال تتجاهل القيم الفارغة NULL داخل الأعمدة.
+            </p>
+            <img
+              src="/assets/images/types.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+          </section>
+
+          <section
+            id="collected-functions-ex"
+            class="aside-section"
+            data-link="collected-functions-ex"
+          >
+            <h3>أمثلة على الدوال التجميعية:</h3>
+
+            <div class="example-1">
+              <p class="ps-4 fs-5">مثال (1):</p>
+
+              <img
+                src="/assets/images/example5-1.png"
+                alt="describe-sql-query"
+                class="describe-img-query mb-2"
+              />
+
+              <p class="fs-5">
+                فى المثال السابق تم عرض أكبر راتب، وأقل راتب، والمتوسط الحسابي
+                للرواتب.
+              </p>
+            </div>
+            <h3>ملحوظة هامة:</h3>
+            <p class="fs-5">
+              كل من الدالتين MAX وmin تتعامل مع جميع البيانات، أى عند استخدامهما
+              مع البيانات الحرفية تكون النتيجة حسب الترتيب الأبجدى، لاحظ المثال
+              التالى:
+            </p>
+          </section>
+
+          <section
+            id="collected-functions-ex"
+            class="aside-section"
+            data-link="collected-functions-ex"
+          >
+            <h3>مثال(2):</h3>
+            <img
+              src="/assets/images/example5-22.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم عرض أول أسماء الموظفين حسب الترتيب الأبجدى
+              وآخر الأسماء.
+            </p>
+          </section>
+
+          <section id="count" class="aside-section" data-link="count">
+            <h3>التعامل مع الدالة COUNT:</h3>
+
+            <p class="ps-4 fs-5">يوجد حالتان للدالة count هما:</p>
+            <h3>- Count(*) :</h3>
+            <p class="ps-4 fs-5">
+              تستخدم لعد جميع الصفوف داخل الجدول بما فيها الصفوف المكررة والصفوف
+              التى تحتوى على القيم الفارغة null واذا كانت جملة الاستفسار تحتوى
+              على شرط where فإنها تقوم بعد الصفوف حسب جملة الشرط.
+            </p>
+            <h3>- Count(column):</h3>
+            <p class="ps-4 fs-5">
+              تستخدم لعد قيم أو بيانات عمود معين مع تجاهل القيم null . والأمثلة
+              التالية توضح ذلك:
+            </p>
+            <h3>مثال(3):</h3>
+            <img
+              src="/assets/images/example5-3.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <p class="ps-4 fs-5">
+              تم عرض اجمالى عدد الصفوف داخل جدول الموظفين وهم (5) صفوف، ، وكذلك
+              عرض الموظفين الذين يأخذون مكافآت وعددهم (2) مع تجاهل القيم الفارغة
+              null داخل العمود comm..
+            </p>
+            <img
+              src="/assets/images/example5-2.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+          </section>
+
+          <section id="Group-by" class="aside-section" data-link="Group-by">
+            <h3>ثالثا: إنشاء مجموعات من البيانات باستخدام الجزء Group by:</h3>
+
+            <p class="ps-4 fs-5">
+              بفرض اننا نريد ايجاد أول البوم الذى قام بانشاءه المستخدمين، ولعمل
+              ذلك نستخدم الجزء group by والذى يقوم بتقسيم البيانات الى مجموعات
+              على حسب عمود معين أو أكثر.
+            </p>
+            <img
+              src="/assets/images/groupby1.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <p class="ps-4 fs-5">
+              والشكل التالى يبين تأثير استخدام الجزء group by.
+            </p>
+            <img
+              src="/assets/images/groupby2.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <p class="ps-4 fs-5">
+              من الشكل السابق يتضح أنه تم عرض أسماء الالبومات والمستخدمين اللذين
+              قاموا بانشاءها وأرقام الالبومات حيث تم عرضها على أساس أول البوم
+              قام المستخدم بأنشاءه ، فالمستخدم رقم 3 قام بانشاء اول البوم له وهو
+              الرقم 35 والمستخدم رقم 4 انشأ أول البوم له وهو 32.
+            </p>
+          </section>
+
+          <section id="Group-by" class="aside-section" data-link="Group-by">
+            <h3>مثال(4):</h3>
+            <img
+              src="/assets/images/having2.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+
+            <p class="ps-4 fs-5">
+              عند تنفيذ المثال السابق تظهر رسالة خطأ، وذلك لأننا استخدمنا الدالة
+              AVG(`album_id`) داخل الجزء where وهذا غير مسموح ، ولتصحيح هذا
+              الخطأ لابد من استبدال جملة الشرط where
+            </p>
+            <p class="ps-4 fs-5">
+              بجملة شرط خاصة بالدوال التجميعية وهى having كما فى المثال التالى:
+            </p>
+          </section>
+
+          <section id="Having" class="aside-section" data-link="Having">
+            <h3>رابعا: جملة الشرط المستخدمة مع الدوال التجميعية Having</h3>
+            <img
+              src="/assets/images/having.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+
+            <p class="ps-4 fs-5">
+              فى هذا المثال تم عرض المتوسط الحسابي لأرقام الألبومات بشرط أن تكون
+              المتوسطات الحسابية أكبر من 30، لاحظ استخدام الجزء having لتطبيق
+              شرط معين على الدوال التجميعية.
+            </p>
+            <img
+              src="/assets/images/having2.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+          </section>
+
+          <section
+            id="show-activity"
+            class="aside-section"
+            data-link="specific-fields-activity"
+          ></section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/module.js" type="module"></script>
+  </body>
+</html>

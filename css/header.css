@@ -1,0 +1,53 @@
+header {
+  margin-bottom: 20px;
+}
+
+.navbar {
+  min-height: 70px;
+
+  li a {
+    position: relative;
+    width: fit-content;
+  }
+
+  li a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    background-color: white;
+    width: 0;
+    height: 2px;
+    transition: 0.3s;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -o-transition: 0.3s;
+  }
+
+  li a:hover::before {
+    width: 80%;
+    left: 10%;
+  }
+}
+
+.sql-logo {
+  height: 60px;
+}
+
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-line {
+  width: 30px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+}
+
+#logout-btn:hover {
+  background-color: #011d29;
+}

@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/aside.css" />
+    <link rel="stylesheet" href="/css/module.css" />
+
+    <title>الوحده الرابعه</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="container-xxl d-flex align-items-start">
+        <aside
+          class="bg-main-color text-white rounded-top p-1 py-sm-3 px-sm-1 d-none d-md-block"
+        >
+          <div class="accordion" id="accordionExample">
+            <h3 class="ms-4">
+              <a
+                href="#main-goals"
+                class="text-white text-decoration-none aside-button"
+                data-link="main-goals"
+                >الأهداف</a
+              >
+            </h3>
+
+            <div class="accordion-item accordion-content">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  الموضوعات
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body p-1 p-md-2 p-lg-3">
+                  <ul>
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#general-formula"
+                        data-link="general-formula"
+                        >الدوال المستخدمة فى لغة الاستفسارات SQL
+                      </a>
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#reqiurments"
+                        data-link="reqiurments"
+                        >انواع الدوال المستخدمه في لغة الاستفسارات SQL</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#select"
+                        data-link="select"
+                        >: دوال الصف الواحد Single_row functions</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#character-functions"
+                        data-link="character-functions"
+                        >الدوال الحرفية character functions</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#Number-function"
+                        data-link="Number-function"
+                        >الدوال الرقمية: Number function
+                      </a>
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#Date-Function"
+                        data-link="Date-Function"
+                        >دوال التاريخ: Date Function</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="m-4">
+              <a
+                href="#show-activity"
+                class="text-white text-decoration-none aside-button"
+                data-link="show-activity"
+                >الأنشطة</a
+              >
+            </h4>
+          </div>
+        </aside>
+
+        <div class="content flex-grow-1 ps-1 ps-md-4">
+          <section id="main-goals" class="aside-section" data-link="main-goals">
+            <div class="main-goals">
+              <h2 class="text-center mb-4">
+                دوال الصف الواحد SINGLE_ROW FUNCTIONS
+              </h2>
+              <div class="mb-4">
+                <h3 class="mb-3">الهدف العام:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  تمكين الطالب من استخدام دوال الصف الواحد (Single-row
+                  Functions) لتحليل البيانات وإجراء تعديلات عليها.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="mb-3">الاهداف السلوكية:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  فى نهاية هذا الفصل لابد ان يكون الطالب قادرا على :
+                </p>
+                <ol class="mb-0 ms-5 fs-5">
+                  <li>
+                    أن يتمكن الطالب من كتابة استعلام لتحويل النصوص إلى حروف
+                    كبيرة أو صغيرة باستخدام دوال النصوص
+                  </li>
+                  <li>
+                    أن يستخرج الطالب جزءًا معينًا من النصوص بناءً على متطلبات
+                    محددة.
+                  </li>
+                  <li>أن يحسب الطالب طول النصوص باستخدام دوال الطول.</li>
+                  <li>أن يفهم الفرق بين دوال الصف الواحد والدوال التجميعية.</li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="general-formula"
+            class="aside-section"
+            data-link="general-formula"
+          >
+            <h3>الدوال المستخدمه في لغة الSQL</h3>
+
+            <p class="ps-4 fs-5">
+              توجد دوال تستخدم داخل لغة الاستفسارات تسمى SQL FUNCTION وهذه
+              الدوال تعتبر أداة قوية ومفيدة عند استخدام جملة SELECT ، وتنقسم هذه
+              الدوال الى نوعين كما هو مبين فى الشكل التالى:
+            </p>
+
+            <img
+              src="/assets/images/sql-function.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+          </section>
+
+          <section
+            id="reqiurments"
+            class="aside-section"
+            data-link="reqiurments"
+          >
+            <h3>النوع الأول</h3>
+
+            <p class="ps-4 fs-5">يسمى دوال الصف الواحد SINGLE_ROW FUNCTION</p>
+
+            <ol class="fs-5">
+              <li class="mb-2">
+                وهذا النوع يقوم بالتعامل مع بيانات صف واحد فقط لاخراج قيمة واحدة
+                وهو الذى سيتم شرحه بالتفصيل فى هذا الفصل.
+              </li>
+            </ol>
+            <h3>النوع الثانى</h3>
+
+            <div class="example-1">
+              <p class="ps-4 fs-5">
+                يسمى الدوال التجميعية لأكثر من صف MULTIPLE_ROW FUNCTION
+              </p>
+
+              <p class="fs-5">
+                وهذا النوع يقوم بالتعامل مع بيانات أكثر من صف لاخراج قيمة واحدة
+                وسوف يتم شرحه فى الفصل القادم بإذن الله.
+              </p>
+            </div>
+          </section>
+
+          <section id="select" class="aside-section" data-link="select">
+            <h3>دوال الصف الواحد Single_row functions</h3>
+
+            <p class="ps-4 fs-5">
+              وهى كما ذكرنا عبارة عن دوال تتعامل مع بيانات صف واحد فقط وتكون
+              نتيجتها قيمة واحدة فقط، و تستخدم فى أى مكان من جملة select ماعدا
+              الجزء from وتنقسم الى عدة أنواع هى: - دوال حرفية character
+              functions. - دوال رقمية number functions
+            </p>
+          </section>
+
+          <section
+            id="character-functions"
+            class="aside-section"
+            data-link="character-functions"
+          >
+            <h3>الدوال الحرفية character functions</h3>
+
+            <p class="ps-4 fs-5">
+              هي دوال تتعامل مع البيانات الحرفية وتكون نتيجتها اما حروفا أو
+              ارقاما والجدول التالى يبين جميع الدوال الحرفية ووظيفة كل منها.
+            </p>
+            <img
+              src="/assets/images/function-function.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+          </section>
+
+          <section
+            id="character-functions"
+            class="aside-section"
+            data-link="character-functions"
+          >
+            <h3>
+              الجدول التالى يحتوى على أمثلة لكل دالة من الدوال الحرفية مع
+              النتيجة لكل منها.
+            </h3>
+            <img
+              src="/assets/images/function-example.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <h3>ملحوظة :</h3>
+
+            <p class="ps-4 fs-5">
+              الجدول (DUAL) هو جدول وهمى موجود داخل لغة أوراكل SQL يستخدم لاجراء
+              العمليات التى لايدخل فيها أى جدول من داخل قاعدة البيانات.
+            </p>
+          </section>
+
+          <section
+            id="character-functions"
+            class="aside-section"
+            data-link="character-functions"
+          >
+            <h3>بعض الأمثلة على الدوال الحرفية:</h3>
+            <h3>مثال(1):</h3>
+            <img
+              src="/assets/images/example1.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <img
+              src="/assets/images/example1-2.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم استخدام دالة concat للجمع بين الحقول فى
+              الجدول. بالاضافة الى امكانية اضافة نصوص تربط بين هذه الحقول، توضع
+              هذه النصوص بين علامات تنصيص مفردة ' '.
+            </p>
+          </section>
+
+          <section
+            id="character-functions"
+            class="aside-section"
+            data-link="character-functions"
+          >
+            <h3>مثال(2):</h3>
+
+            <img
+              src="/assets/images/example2.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم عرض اسماء الالبومات بالحروف الصغيرة ووصفهم
+              بالحروف الكبيرة.
+            </p>
+          </section>
+
+          <section
+            id="character-functions"
+            class="aside-section"
+            data-link="character-functions"
+          >
+            <h3>مثال(3):</h3>
+
+            <img
+              src="/assets/images/example3.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <h3>شرح مثال(3):</h3>
+
+            <p class="ps-4 fs-5">
+              سوف نقوم بشرح كل جزء من جملة select السابقة على حده حتى يسهل فهم
+              عمل كل دالة.
+            </p>
+
+            <p class="ps-4 fs-5">
+              - فى الجزء الاول (name) تم عرض اسماء الالبومات وذلك لمعرفة تأثير
+              الدوال عليها.
+            </p>
+            <p class="ps-4 fs-5">
+              - فى الجزء الثانى SUBSTR(`name`,2,3) تم عرض جزء من الاسماء بداية
+              من الحرف رقم (2) من اليسار وعدد الاحرف المقطوعة (3) أحرف بفعل
+              الدالة SUBSTR والتى تقوم بقطع جزء معين من الكلمة.
+            </p>
+            <p class="ps-4 fs-5">
+              - فى الجزء الثالث من المثال تم عرض عدد أحرف الاسماء بفعل الدالة
+              LENGTH ونلاحظ هنا أن ناتج هذه الدالة يكون رقميا.
+            </p>
+            <p class="ps-4 fs-5">
+              - فى الجزء الرابع من المثال تم عرض ترتيب الحرف (e) بداية من اليسار
+              داخل أسماء الالبومات بفعل الدالة instr فنلاحظ أن ترتيب الحرف e
+              داخل الاسم network هو الثانى.
+            </p>
+          </section>
+
+          <section
+            id="character-functions"
+            class="aside-section"
+            data-link="character-functions"
+          >
+            <h3>مثال(4):</h3>
+
+            <img
+              src="/assets/images/example4.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+
+            <h3>شرح مثال(4):</h3>
+
+            <p class="ps-4 fs-5">
+              - فى الجزء الاول (name) تم عرض اسماء الالبومات وذلك لمعرفة تأثير
+              الدوال عليها.
+            </p>
+
+            <p class="ps-4 fs-5">
+              - فى الجزء الثانى من المثال TRIM( 's' FROM`name`) تم عرض الاسماء
+              بعد قص الحرف s من بدايتها او نهايتها وذلك بفعل الدالة TRIM فنلاحظ
+              أن الاسم student photo قد تم قص الحرف s من بدايته.
+            </p>
+            <p class="ps-4 fs-5">
+              - فى الجزء الثالث LPAD(`name`,15,'*') تم عرض الاسماء بعد اضافة عدد
+              من الرمز (*) الى الاسماء من اليسار بحيث يصبح اجمالى طول الاسماء
+              (15) أحرف، فمثلا الاسم network عبارة عن سبعة احرف وبفعل الدالة
+              LPAD قد تم اضافة الرمز(*) ثمانية مرات من اليسار ليصبح طوله 15 حرف،
+              ونلاحظ أن هذه الدالة تقوم بمحاذاة الاسماء ناحية اليمين.
+            </p>
+            <p class="ps-4 fs-5">
+              - الجزء الرابع RPAD(`name`,15,'^') يماثل تماما الجزء الثالث ولكن
+              اضافة الرمز (^) الى الاسماء من اليمين، ونلاحظ أيضا أن هذه الدالة
+              تقوم بالمحاذاة ناحية اليسار.
+            </p>
+            <p class="ps-4 fs-5">
+              تذكر دائما أنه يمكن استخدام هذه الدوال فى أى جزء من جملة select
+              ماعدا الجزء from.
+            </p>
+          </section>
+
+          <section
+            id="Number-function"
+            class="aside-section"
+            data-link="Number-function"
+          >
+            <h3>رابعا: الدوال الرقمية: Number function</h3>
+
+            <p class="ps-4 fs-5">
+              وهى دوال تعمل مع البيانات الرقمية وتكون نتيجتها أرقاما فقط،
+              والجدول التالى يبين جميع الدوال الرقمية ووظيفة كل منها.
+            </p>
+            <img
+              src="/assets/images/number-function.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+          </section>
+
+          <section
+            id="Number-function"
+            class="aside-section"
+            data-link="Number-function"
+          >
+            <h3>مثال(5):</h3>
+
+            <img
+              src="/assets/images/example5.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+
+            <h3>شرح مثال(5):</h3>
+
+            <p class="ps-4 fs-5">
+              المثال السابق يوضح تأثير استخدام الدالة الرقمية round على الارقام،
+              فنجد أنه عندما كانت قيمة n مساوية للصفر
+            </p>
+
+            <p class="ps-4 fs-5">
+              فانه تم التقريب الى عدد صحيح فكانت النتيجة (46)، وعندما كانت n
+              تساوى العدد(2) فانه تم التقريب الى عددين عشريين فكانت النتيجة
+              (45,92)
+            </p>
+            <p class="ps-4 fs-5">
+              وعندما كانت n تساوى (-1) فان التقريب تم على الجزء قبل العلامة
+              العشرية فى العدد (5) فأصبحت النتيجة (50)،
+            </p>
+            <p class="ps-4 fs-5">
+              ونلاحظ أنه عندما كانت n تساوى (-2) فانه تم تقريب العدد (45) الى
+              الصفر وذلك لأن العدد 45 اقل من 50 لأننا نقرب مئات.
+            </p>
+            <img
+              src="/assets/images/example5-2.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+          </section>
+
+          <section
+            id="Number-function"
+            class="aside-section"
+            data-link="Number-function"
+          >
+            <h3>مثال(6):</h3>
+            <img
+              src="/assets/images/example6.png"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم عرض مرتب الموظف وعمولته وباقى قسمة راتبه على
+              مايأخذه من عمولته.
+            </p>
+          </section>
+
+          <section
+            id="Date-Function"
+            class="aside-section"
+            data-link="Date-Function"
+          >
+            <h3>دوال التاريخ: Date Function</h3>
+
+            <p class="ps-4 fs-5">
+              هى دوال تتعامل مع البيانات التى من النوع (تاريخ)، ولما للتاريخ
+              والوقت من أهمية بالغة فى الحياة اليومية بل انه يمثل الحياة، فقد
+              قامت أوراكل بتوفير دوال بسيطة وقوية للتعامل مع التاريخ، علما بأن
+              اوراكل قامت بتخزين التاريخ بالشكل التالى (DD-MON-YY).
+            </p>
+            <p class="ps-4 fs-5">
+              هذه الدوال تقوم بإرجاع معلومات مفيدة عن وقت التغيير الذي طرا على
+              الملف أو آخر مره تم قراءته وهي على حسب نظام التشغيل فإذا كان نظام
+              السيرفير هو يونكس أو لينوكس ستقوم الدوال بإرجاع الوقت بنظام
+              (timestamp) وهو الوقت مترجم إلي عدد الثواني منذ صدور يونكس ومولده
+              على العالم ، بينما تقوم بإرجاع وقت التعديل على نظام الويندوز
+              مباشره
+            </p>
+          </section>
+
+          <section
+            id="show-activity"
+            class="aside-section"
+            data-link="show-activity"
+          ></section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/module.js" type="module"></script>
+  </body>
+</html>

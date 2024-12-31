@@ -1,0 +1,46 @@
+:root {
+  --main-color: #005d85;
+}
+
+.sql-query {
+  flex-basis: 130px;
+}
+
+.sql-query-input {
+  margin-top: 10px;
+  width: 80%;
+  min-width: 17rem;
+  border: 2px solid var(--main-color);
+  outline: none;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+
+.sql-query-input.wrong {
+  border-color: red;
+}
+
+.sql-query-input.right {
+  border-color: green;
+}
+
+.img-query {
+  width: 40rem;
+  max-width: 65%;
+}
+
+section:not(:first-child) {
+  margin: 120px 0;
+}
+
+section {
+  background-color: rgb(248, 242, 242);
+  padding: 20px;
+}
+
+.radio {
+  caret-color: red;
+}

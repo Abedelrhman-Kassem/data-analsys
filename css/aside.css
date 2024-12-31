@@ -1,0 +1,30 @@
+aside {
+  width: 200%;
+  max-width: 400px;
+  min-height: calc(100vh - 90px);
+  position: sticky;
+  top: 10px;
+  overflow-y: auto;
+}
+
+.accordion-item {
+  background-color: transparent;
+  border: none;
+}
+
+.accordion-button {
+  background-color: transparent;
+  color: white;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #005d85;
+  background-color: #ffffff;
+  box-shadow: none;
+}

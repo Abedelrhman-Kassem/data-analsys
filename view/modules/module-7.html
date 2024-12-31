@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/aside.css" />
+    <link rel="stylesheet" href="/css/module.css" />
+
+    <title>الوحدة السابعة</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="container-xxl d-flex align-items-start">
+        <aside
+          class="bg-main-color text-white rounded-top p-1 py-sm-3 px-sm-1 d-none d-md-block"
+        >
+          <div class="accordion" id="accordionExample">
+            <h3 class="ms-4">
+              <a
+                href="#main-goals"
+                class="text-white text-decoration-none aside-button"
+                data-link="main-goals"
+                >الأهداف</a
+              >
+            </h3>
+
+            <div class="accordion-item accordion-content">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  الموضوعات
+                </button>
+              </h2>
+
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body p-1 p-md-2 p-lg-3">
+                  <ul>
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#general-formula"
+                        data-link="general-formula"
+                        >كيفية عمل الاستعلامات الفرعية.</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#reqiurments"
+                        data-link="reqiurments"
+                        >أنواع الاستعلامات الفرعية.</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#select"
+                        data-link="select"
+                        >متطلبات وارشادات الاستعلام الفرعي.</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#alias"
+                        data-link="alias"
+                        >أنواع معاملات المقارنة المستخدمة مع الاستعلام
+                        الفرعى.</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#math"
+                        data-link="math"
+                        >أماكن كتابة الاستعلامات الفرعية داخل جملة SELECT.</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#operator-precedence"
+                        data-link="operator-precedence"
+                        >الاستعلامات الفرعية الاحادية الصف: Single- row
+                        subquery</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#distinct"
+                        data-link="distinct"
+                        >الاستعلامات الفرعية المتعددة الصفوف: multiple-row
+                        subquery</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <h3 class="m-4">
+              <a
+                href="#show-activity"
+                class="text-white text-decoration-none aside-button"
+                data-link="show-activity"
+                >الأنشطة</a
+              >
+            </h3>
+          </div>
+        </aside>
+
+        <div class="content flex-grow-1 ps-1 ps-md-4">
+          <section id="main-goals" class="aside-section" data-link="main-goals">
+            <div class="main-goals">
+              <h2 class="text-center mb-4">الاستعلامات الفرعية</h2>
+              <div class="mb-4">
+                <h3 class="mb-3">الهدف العام:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  معرفة وفهم الاستعلامات الفرعية وأنواعها وكيفية استخدامها.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="mb-3">الأهداف السلوكية:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  فى نهاية هذا الفصل لابد ان يكون الطالب قادرا على أن :
+                </p>
+                <ol class="mb-0 ms-5 fs-5">
+                  <li>يتعرف على كيفية عمل الاستعلامات الفرعية.</li>
+                  <li>يتعرف على أنواع الاستعلامات الفرعية.</li>
+                  <li>
+                    يستخدم الاستعلام الفرعى أحادى الصف Single- row subquery.
+                  </li>
+                  <li>
+                    يستخدم معاملات المقارنة ذات الصف الواحد مع الاستعلام الفرعى
+                    أحادى الصف.
+                  </li>
+                  <li>
+                    يتعرف على أماكن كتابة الاستعلامات الفرعية داخل جملة Select.
+                  </li>
+                  <li>
+                    يستخدم الاستعلام الفرعى المتعدد الصفوف multiple-row
+                    subquery.
+                  </li>
+                  <li>
+                    تستخدم معاملات المقارنة المتعددة الصفوف مع الاستعلام الفرعى
+                    المتعدد الصفوف.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="general-formula"
+            class="aside-section"
+            data-link="general-formula"
+          >
+            <h3>كيفية عمل الاستعلامات الفرعية :</h3>
+            <br />
+
+            <p class="fs-5 d-flex mb-2">
+              <b>
+                لمعرفة وفهم أهمية الاستعلامات الفرعية (subqueries) أجب عن هذا
+                السؤال:
+              </b>
+            </p>
+
+            <p class="fs-5 d-flex mb-2">
+              من هم الموظفون الذين يأخذون رواتب أكبر من الموظف (ahmed)؟
+            </p>
+
+            <p class="fs-5 d-flex mb-2">
+              للإجابة على هذا السؤال لابد أولا من معرفة ماهو مرتب الموظف، ثم
+              نأخذ هذا المرتب ونبني جملة استعلام تحتوى على عرض بيانات الموظفين
+              بشرط أن تكون رواتبهم أكبر من راتب الموظف (ahmed)، أى اننا سوف نقوم
+              بعمل استعلامين كالاتى:
+            </p>
+            <br />
+            <p class="fs-5 d-flex mb-2">
+              <span class="sql-query text-center fw-bold"
+                >الاستعلام الأول:</span
+              >
+              <span> ايجاد مرتب الموظف (ahmed) كالاتى : </span>
+            </p>
+            <br />
+            <img
+              src="/assets/images/first_query.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <br /><br />
+            <p class="fs-5 d-flex mb-2">
+              <span class="sql-query text-center fw-bold"
+                >الاستعلام الثانى:
+              </span>
+              <span
+                >استخدام ناتج الاستعلام الأول لمعرفة الموظفين الذين يأخذون رواتب
+                أكبر من هذا الناتج كالاتى:
+              </span>
+            </p>
+            <br />
+            <img
+              src="/assets/images/second_query.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <br /><br />
+            <p class="fs-5 d-flex mb-2">
+              وبالتالى قد حصلنا على الاجابة المطلوبة ولكن بطريقة عادية وطويلة،
+              واذا أردنا الاجابة على هذا السؤال بجملة استعلام واحدة، نقوم بدمج
+              الاستعلامين السابقين بحيث يكون الاستعلام الأول استعلاما
+              داخليا(فرعى) والاستعلام الثانى والذى سوف يأتي بالاجابة يكون
+              استعلاما خارجيا(رئيسي) كالتالى:
+            </p>
+            <br />
+            <img
+              src="/assets/images/main_query.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <br /><br />
+            <p class="fs-5 d-flex mb-2">
+              الشكل العام لجملة الاستعلامات الفرعية:
+            </p>
+            <br />
+            <img
+              src="/assets/images/subquery.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <br /><br />
+            <p class="fs-5 d-flex mb-2">
+              <b>مثال(1):</b>
+            </p>
+            <p class="fs-5 d-flex mb-2">
+              عرض أرقام الصور وأرقام الالبومات وامتداد الصور.
+            </p>
+            <img
+              src="/assets/images/ex1.7.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <br /><br />
+            <p class="fs-5 d-flex mb-2">
+              فى المثال السابق تم ايجاد رقم الالبوم اولا بشرط أن يكون فيه رقم
+              الصورة مساويا للرقم 26، هذا هو استعلام داخلى(فرعى) وكانت النتيجة
+              هى (32)، ثم تم عرض أرقم الصور وأرقام الالبومات والامتدادات الخاصة
+              بالصور عن طريق الاستعلام الخارجى الرئيسي.
+            </p>
+            <br />
+            <p class="fs-5 d-flex mb-2">
+              <b>ملحوظة هامة: </b>
+              يقوم SQL بتنفيذ الاستعلام الداخلى (الفرعى) أولا ثم ينفذ الاستعلام
+              الخارجى (الرئيسي).
+            </p>
+            <br />
+            <img
+              src="/assets/images/important note.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+          </section>
+
+          <section
+            id="reqiurments"
+            class="aside-section"
+            data-link="reqiurments"
+          >
+            <h3>أنواع الاستعلامات الفرعية:</h3>
+
+            <p class="ps-4 fs-5">
+              تنقسم الاستعلامات الفرعية الى ثلاثة أنواع هى:
+            </p>
+
+            <ol class="fs-5">
+              <li class="mb-2">
+                استعلام فرعى أحادى الصف ويرجع بصف واحد Single- row subquery
+              </li>
+              <li class="mb-2">
+                استعلام فرعى متعدد الصفوف ويرجع بأكثر من صف multiple-row
+                subquery
+              </li>
+              <li class="mb-2">
+                استعلام فرعى متعدد الأعمدة ويرجع بأكثر من عمود multiple-column
+                subquery
+              </li>
+            </ol>
+          </section>
+
+          <section id="select" class="aside-section" data-link="select">
+            <h3>متطلبات وارشادات الاستعلام الفرعي :</h3>
+
+            <p class="ps-4 fs-5">
+              يجب مراعاة الآتى عند استخدام الاستعلام الفرعى:
+            </p>
+
+            <ol class="fs-5">
+              <li class="mb-2">يجب وضع الاستعلام الفرعى بين قوسين.</li>
+              <li class="mb-2">
+                يجب وضع الاستعلام الفرعى يمين معامل المقارنة (<> ، = ، =< ، =>
+                ،.....الخ).
+              </li>
+              <li class="mb-2">
+                يجب التأكد من استخدام المعاملات الأحادية الصف مع الاستعلامات
+                الفرعية الاحادية الصف Single- row subquery.
+              </li>
+              <li class="mb-2">
+                يجب التأكد من استخدام المعاملات المتعددة الصفوف مع الاستعلامات
+                الفرعية متعددة الصفوف أى التى ترجع باكثر من صف.
+              </li>
+            </ol>
+          </section>
+
+          <section id="alias" class="aside-section" data-link="alias">
+            <h3>أنواع معاملات المقارنة المستخدمة مع الاستعلام الفرعى :</h3>
+
+            <p class="ps-4 fs-5">يوجد نوعان من معاملات المقارنة وهى :</p>
+            <li class="mb-2">
+              <b>معاملات احادية الصف </b> مثل (<> ، = ، =< ، => ،.....الخ)
+              وتستخدم مع الاستعلامات الفرعية احادية الصف اى التى ترجع بصف واحد
+              (قيمة واحدة).
+            </li>
+            <li class="mb-2">
+              <b>معاملات متعددة الصف </b> مثل (ALL,ANY,IN) وتستخدم مع
+              الاستعلامات الفرعية متعددة الصفوف اى التى ترجع بأكثر من صف.
+            </li>
+          </section>
+
+          <section id="math" class="aside-section" data-link="math">
+            <h3>أماكن كتابة الاستعلامات الفرعية داخل جملة SELECT :</h3>
+
+            <p class="ps-4 fs-5">
+              يجب كتابة الاستعلامات الفرعية فى الأجزاء التالية من جملة select:
+            </p>
+            <p class="ps-4 fs-5">
+              <b> (where, having, from) </b>
+            </p>
+          </section>
+
+          <section
+            id="operator-precedence"
+            class="aside-section"
+            data-link="operator-precedence"
+          >
+            <h3>الاستعلامات الفرعية الاحادية الصف: Single- row subquery :</h3>
+
+            <p class="ps-4 fs-5">
+              وهى استعلامات دائما تكون نتيجتها صف واحد فقط، ولذلك يستخدم معها
+              المعاملات الاحادية الصف (<> ، = ، =< ، => ،.....الخ).
+            </p>
+            <p class="ps-4 fs-5">
+              <b> مثال(2): </b>
+            </p>
+            <p class="ps-4 fs-5">
+              قم بعرض أسماء ورواتب الموظفين الذين رواتبهم مساوية لأقل راتب.
+            </p>
+            <img
+              src="/assets/images/ex2.7.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+          </section>
+
+          <section id="distinct" class="aside-section" data-link="distinct">
+            <h3>الاستعلامات الفرعية المتعددة الصفوف multiple-row subquery :</h3>
+
+            <p class="ps-4 fs-5">
+              هى استعلامات ترجع دائما بأكثر من صف ولذلك يستخدم معها المعاملات
+              المتعددة الصفوف(ALL,ANY,IN) والجدول التالى يبين معنى المعاملات
+              المتعددة والتى تستخدم لمقارنة مجموعة من الصفوف.
+            </p>
+            <img
+              src="/assets/images/multiple-row subquery.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <br /><br />
+            <p class="ps-4 fs-5">
+              <b> مثال(3): </b>
+            </p>
+            <p class="ps-4 fs-5">
+              قم بعرض رقم المستخدم ورقم الصورة ورقم الالبوم والامتداد والذى يكون
+              فيه رقم الالبوم مساويا للرقم 32.
+            </p>
+            <img
+              src="/assets/images/ex3.7.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <br />
+            <p class="ps-4 fs-5">
+              <b> ملحوظات على المثال السابق : </b>
+            </p>
+            <ol class="fs-5">
+              <li class="mb-2">
+                نتيجة الاستعلام الفرعى عبارة عن مجموعة من القيم تمثل مجموعة من
+                الصفوف.
+              </li>
+              <li class="mb-2">
+                تم استخدام المعامل المتعدد (IN) لأننا هنا نقارن بمجموعة من
+                الصفوف.
+              </li>
+              <li class="mb-2">
+                فى الاستعلام الرئيسي تم عرض بيانات الالبومات التى يكون فيها رقم
+                الالبوم مساويا للرقم 32.
+              </li>
+            </ol>
+          </section>
+
+          <section
+            id="show-activity"
+            class="aside-section"
+            data-link="show-activity"
+          ></section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/module.js" type="module"></script>
+  </body>
+</html>

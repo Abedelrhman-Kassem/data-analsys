@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/login.css" />
+
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="container d-flex align-items-center justify-content-center">
+      <form id="form" class="bg-light p-5">
+        <h1 class="mb-4">تسجيل الدخول</h1>
+
+        <div class="form-floating mb-4">
+          <input
+            class="code form-control shadow-none rounded-pill py-0 px-4"
+            type="code"
+            id="code"
+            placeholder="الكود الجامعى"
+            name="code"
+          />
+
+          <label class="p-1" for="code">الكود الجامعى </label>
+          <div id="code-validation" class="validation d-none text-danger ps-4">
+            الكود الجامعى يجب ان يتكون من 14 رقم
+          </div>
+        </div>
+
+        <div class="form-floating mb-4">
+          <input
+            class="password form-control shadow-none rounded-pill py-0 px-4"
+            type="password"
+            id="password"
+            placeholder="كلمة المرور"
+            name="password"
+          />
+
+          <label class="p-1" for="password">كلمة المرور </label>
+          <div id="pass-validation" class="validation d-none text-danger ps-4">
+            كلمة المرور مطلوبه
+          </div>
+        </div>
+
+        <div id="api-validation" class="text-danger mb-1"></div>
+        <div class="location mb-1">
+          إذا لم يكن لديك حساب
+          <a href="/view/register.html">قم إنشاء حساب</a>
+        </div>
+
+        <input
+          class="submit pointer border-0 py-2 w-100 text-white rounded-pill"
+          type="submit"
+          value="تسجيل"
+        />
+      </form>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/login.js"></script>
+  </body>
+</html>

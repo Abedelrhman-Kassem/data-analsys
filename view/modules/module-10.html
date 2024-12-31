@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/aside.css" />
+    <link rel="stylesheet" href="/css/module.css" />
+
+    <title>الوحده العاشره</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="container-xxl d-flex align-items-start">
+        <aside
+          class="bg-main-color text-white rounded-top p-1 py-sm-3 px-sm-1 d-none d-md-block"
+        >
+          <div class="accordion" id="accordionExample">
+            <h3 class="ms-4">
+              <a
+                href="#main-goals"
+                class="text-white text-decoration-none aside-button"
+                data-link="main-goals"
+                >الأهداف</a
+              >
+            </h3>
+
+            <div class="accordion-item accordion-content">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  الموضوعات
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body p-1 p-md-2 p-lg-3">
+                  <ul>
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#descripe"
+                        data-link="descripe"
+                        >وصف الكائنات داخل قاعدة البيانات
+                      </a>
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#data-type"
+                        data-link="data-type"
+                        >أنواع البيانات data types</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#select"
+                        data-link="select"
+                        >الشروط الواجب توافرها عند اختيار اسم الجداول او أسماء
+                        الأعمدة:</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#alias"
+                        data-link="alias"
+                        >انشاء الجداول creating tables</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#math"
+                        data-link="math"
+                        >انشاء الجداول باستخدام الاستعلامات الفرعية:
+                      </a>
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#operator-precedence"
+                        data-link="operator-precedence"
+                        >التعديل فى الجداول باستخدام alter table</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#distinct"
+                        data-link="distinct"
+                        >الغاء جدول باستخدام الأمر drop</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="m-4">
+              <a
+                href="#show-activity"
+                class="text-white text-decoration-none aside-button"
+                data-link="show-activity"
+                >الأنشطة</a
+              >
+            </h4>
+          </div>
+        </aside>
+
+        <div class="content flex-grow-1 ps-1 ps-md-4">
+          <section id="main-goals" class="aside-section" data-link="main-goals">
+            <div class="main-goals">
+              <h2 class="text-center mb-4">
+                انشاء الجداول Creating and managing tables
+              </h2>
+              <div class="mb-4">
+                <h3 class="mb-3">الهدف العام:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  التعرف على لغة تعريف البيانات Data definition language التى
+                  تمكننا من انشاء وتعديل والغاء أى كائن داخل قاعدة البيانات،
+                </p>
+              </div>
+
+              <div>
+                <h3 class="mb-3">الاهداف السلوكية:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  فى نهاية هذا الفصل لابد ان يكون الطالب قادرا على :
+                </p>
+                <ol class="mb-0 ms-5 fs-5">
+                  <li>ان يتعرف على أنواع البيانات data types</li>
+                  <li>ان يقوم بانشاء الجداول creating tables</li>
+                  <li>ان يقوم بانشاء الجداول باستخدام الاستعلامات الفرعية:</li>
+                  <li>ان يعدل فى الجداول باستخدام alter table</li>
+                  <li>ان يقوم بالغاء جدول باستخدام الأمر drop</li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section id="descripe" class="aside-section" data-link="descripe">
+            <h3>أولا: وصف الكائنات داخل قاعدة البيانات</h3>
+
+            <img src="\assets\images\A.jpg" />
+
+            <p class="ps-4 fs-5">
+              وكما سبق ذكره فاننا سوف نركز فى هذا الفصل على كائن واحد وهو
+              الجداولtable.
+            </p>
+          </section>
+
+          <section id="data-type" class="aside-section" data-link="data-type">
+            <h3>ثانيا: أنواع البيانات data types</h3>
+
+            <p class="ps-4 fs-5">
+              يوجد أنواع للبيانات التى تخزن داخل الجدول، وهذه البيانات اما أن
+              تكون بيانات حرفية أو عددية أو بيانات تاريخ او بيانات اخرى والعرض
+              التالى يبين أهم أنواع البيانات:
+            </p>
+            <div class="example-1">
+              <div class="ps-4 fs-5">
+                (1):البيانات النصية:
+                <p class="ps-4 fs-5">Char:</p>
+                <p class="ps-4 fs-5">
+                  هذا النوع من الأعمدة هو عمود ذو طول ثابت، اى اذا تم ادراج قيمة
+                  ما عدد حروفها أقل من العدد العظمى للعمود فسيتم حشو باقى الحقل
+                  بفراغات من اليمين، فمثلا اذا قمت بتعريف عمود من نوع char(15)
+                  وقمت بتخزين القيمة ahmed فان MYSQL سيقوم بتخزين تلك القيمة
+                  متبوعة بـ عشر فراغات. وعيب هذا النوع من الأعمدة هو أنه يقوم
+                  بحجز مساحات كبيرة فى قاعدة البيانات ومعظمها يكون عبارة عن
+                  فراغات.
+                </p>
+                <p class="ps-4 fs-5">Varchar:</p>
+                <p class="ps-4 fs-5">
+                  يتميز هذا النوع بأنه ذو طول متغير،أى اذا قمت بتعريف عمود من
+                  نوع varchar(15) وقمت بتخزين القيمة ahmed فان MYSQL سيقوم
+                  بتخزين تلك القيمة ولن يتم حشر فراغات الى يمين القيمة المخزنة
+                  بل يقوم بازالة الفراغات من نهاية السلسلة الحرفية.
+                </p>
+                <div class="example-2">
+                  <div class="ps-4 fs-5">
+                    (2)- البيانات الرقمية
+                    <p class="ps-4 fs-5">Int:</p>
+                    <p class="ps-4 fs-5">
+                      يستخدم هذا النوع من الأعمدة من أجل أعمدة الترقيم التلقائي.
+                    </p>
+
+                    <p class="ps-4 fs-5">Float:</p>
+                    <img src="\assets\images\B.jpg" />
+                    <p class="ps-4 fs-5">
+                      حيث m هى عدد الخانات التى سيتم حجزها وd هو عدد الفواصل
+                      التى ستحدد من هذه الخانات.
+                    </p>
+                    <img src="\assets\images\C.jpg" />
+                    <p class="ps-4 fs-5">
+                      اى أن العمود الذى اسمه column_name نوعه float وعدد خاناته
+                      7 ومنها 3 للفاصلة، أى أن أكبر رقم يمكن أن يخزن به هو
+                      9999.999
+                    </p>
+                    <div class="example-3">
+                      <p class="ps-4 fs-5">(3)- التاريخ والوقت:</p>
+                      <img src="\assets\images\D.jpg" />
+
+                      <p class="ps-4 fs-5">
+                        تستخدم الأنواع السابقة فى تحديد نوع البيانات لكل عمود
+                        عند انشاء الجدول.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="reqiurments"
+            class="aside-section"
+            data-link="reqiurments"
+          >
+            <h3>
+              الشروط الواجب توافرها عند اختيار اسم الجداول او أسماء الأعمدة:
+            </h3>
+
+            <div class="example-1">
+              <p class="ps-4 fs-5">
+                (1): يجب أن يبدأ اسم الجدول أو اسم العمود بحرف.
+              </p>
+            </div>
+            <div class="example-2">
+              <p class="ps-4 fs-5">(2) يجب أن لايزيد طول الاسم عن 30 حرف.</p>
+            </div>
+            <div class="example-3">
+              <p class="ps-4 fs-5">
+                (3) من الممكن أن يتكون من حروف كبيرة وصغيرة وأرقام ورموز خاصة
+                مثل(#،$،_)
+              </p>
+            </div>
+            <div class="example-4">
+              <p class="ps-4 fs-5">
+                (4) يجب أن لايتكرر أسم الجدول أكثر من مرة داخل قاعدة البيانات
+                الواحدة.
+              </p>
+            </div>
+            <div class="example-5">
+              <p class="ps-4 fs-5">
+                (5) يجب أن لا يتكرر أسم عمود أكثر من مرة داخل الجدول الواحد.
+              </p>
+            </div>
+
+            <div class="example-6">
+              <p class="ps-4 fs-5">
+                (6) يجب أن لايكون من الاسماء المحجوزة مثل (from,select…… )
+              </p>
+            </div>
+
+            <div class="example-7">
+              <p class="ps-4 fs-5">
+                (7) يفضل أن يكون اسم الجدول له معنى بحيث يعبر عن نوع بيانات
+                الجدول.
+              </p>
+            </div>
+          </section>
+
+          <section id="alias" class="aside-section" data-link="alias">
+            <h3>ثالثا: انشاء الجداول creating tables.</h3>
+
+            <p class="ps-4 fs-5">الصيغة العامة لانشاء الجداول.</p>
+            <img src="\assets\images\E.jpg" />
+            <p class="ps-4 fs-5">مثال(1): انشاء جدول الموظفين به حقل واحد</p>
+            <img src="\assets\images\F.jpg" />
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم انشاء جدول الموظفين والذى يتكون من عمود واحد
+              وهو رقم الموظف.
+            </p>
+            <img src="\assets\images\G.jpg" />
+          </section>
+
+          <section id="alias" class="aside-section" data-link="alias">
+            <h3>رابعا: انشاء الجداول باستخدام الاستعلامات الفرعية:</h3>
+
+            <p class="ps-4 fs-5">
+              يمكن انشاء جدول باستخدام جدول اخر موجود مسبقا فى قاعدة البيانات،
+              فمثلا لو اردنا انشاء جدول يحتوى على بعض الاعمدة الموجودة اصلا فى
+              جدول اخر دون الحاجة الى تعريف اسماء الاعمدة من جديد او تحديد نوع
+              البيانات فيها، فمثلا اذا اردنا انشاء جدول خاص يحتوى على بيانات
+              الموظف "احمد" فقط الموجود فى جدول الموظفين فاننا نقوم بكتابة الأمر
+              كما فى المثال التالى:
+            </p>
+
+            <img src="\assets\images\H.jpg" />
+
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم انشاء جدول خاص بالموظف أحمد يسمى ew باستخدام
+              جملة select فى الاستعلام الفرعى المبين فى المثال، ونلاحظ أننا
+              استخدمنا الجزء as فى جملة انشاء الجدول، والجدول المسمى بew يتكون
+              من ثلاثة أعمدة هى `name`,`salary`,`comm`يحتوى على بيانات الموظف
+              أحمد.
+            </p>
+          </section>
+
+          <section id="alias" class="aside-section" data-link="alias">
+            <h3>خامسا: التعديل فى الجداول باستخدام alter table</h3>
+
+            <img src="\assets\images\I.jpg" />
+            <p class="ps-4 fs-5">
+              توفر لنا لغة الاستعلام SQL أيضا امكانية مهمة جدا وهى امكانية
+              التعديل فى هيكل البناء الداخلى لجدول قد تم انشاؤه مسبقا باستخدام
+              الامر ALTER TABLE وعملية التعديل فى الجدول تشتمل على ثلاث امكانيات
+              وهى اما اضافة اعمدة جديدة على الجدول او التعديل فى نوع بيانات عمود
+              معين او الغاء عمود معين، كما هو موضح بالجدول التالى:
+            </p>
+
+            <img src="\assets\images\J.jpg" />
+
+            <p class="ps-4 fs-5">
+              توفر لنا لغة الاستعلام SQL أيضا امكانية مهمة جدا وهى امكانية
+              التعديل فى هيكل البناء الداخلى لجدول قد تم انشاؤه مسبقا باستخدام
+              الامر ALTER TABLE وعملية التعديل فى الجدول تشتمل على ثلاث امكانيات
+              وهى اما اضافة اعمدة جديدة على الجدول او التعديل فى نوع بيانات عمود
+              معين او الغاء عمود معين، كما هو موضح بالجدول التالى:
+            </p>
+
+            <img src="\assets\images\K.jpg" />
+
+            <p class="ps-4 fs-5">
+              فى المثال السابق قمنا ياضافة عمود جديد يسمى EMP_NO الى جدو ew
+              وطبعا هذا العمود لايحتوى على ايه بيانات ويظهر هذا العمود كاخر عمود
+              عند الاستعلام.
+            </p>
+
+            <p class="ps-4 fs-5">مثال(3): حذف العمود emp_no .</p>
+
+            <img src="\assets\images\L.jpg" />
+
+            <p class="ps-4 fs-5">
+              -هناك بعض الملاحظات يجب أن نأخذها فى الاعتبار عندما نريد الغاء
+              أعمدة من جدول معين:
+            </p>
+            <p class="ps-4 fs-5">
+              - يجب أن يكون العمود المراد الغاءة فارغا من البيانات.
+            </p>
+            <p class="ps-4 fs-5">
+              -لايمكن الغاء اكثر من عمود واحد فقط فى الامر الواحد.
+            </p>
+            <p class="ps-4 fs-5">-لايمكن استعادة العمود بعد الغاءه.</p>
+            <p class="ps-4 fs-5">
+              -يجب أن يتبقى عمود واحد على الأقل بعد عملية الالغاء داخل الجدول.
+            </p>
+          </section>
+
+          <section id="alias" class="aside-section" data-link="alias">
+            <h3>سادسا: الغاء جدول باستخدام الأمر drop.</h3>
+
+            <p class="ps-4 fs-5">
+              -عملية الغاء الجدول هى عبارة عن الغاء الجدول تماما من قاعدة
+              البيانات وحذف كل بياناته وكل القيود المتعلقه به، وبالتأكيد لايمكن
+              استعادته مرة اخرى.
+            </p>
+
+            <img src="\assets\images\M.jpg" />
+          </section>
+
+          <section id="show-activity"></section>
+        </div>
+      </div>
+    </main>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/module.js" type="module"></script>
+  </body>
+</html>

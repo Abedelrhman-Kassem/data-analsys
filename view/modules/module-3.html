@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/aside.css" />
+    <link rel="stylesheet" href="/css/module.css" />
+
+    <title>الوحده الثالثة</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="container-xxl d-flex align-items-start">
+        <aside
+          class="bg-main-color text-white rounded-top p-1 py-sm-3 px-sm-1 d-none d-md-block"
+        >
+          <div class="accordion" id="accordionExample">
+            <h3 class="ms-4">
+              <a
+                href="#main-goals"
+                class="text-white text-decoration-none aside-button"
+                data-link="main-goals"
+                >الأهداف</a
+              >
+            </h3>
+
+            <div class="accordion-item accordion-content">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  الموضوعات
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body p-1 p-md-2 p-lg-3">
+                  <ul>
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#general-formula"
+                        data-link="general-formula"
+                      >
+                        مقدمة
+                      </a>
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#reqiurments"
+                        data-link="reqiurments"
+                      >
+                        جملة الشرط (WHERE) :</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#select"
+                        data-link="select"
+                        >جملة الترتيب (order by) :</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#alias"
+                        data-link="alias"
+                        >معاملات المقارنة المستخدمة فى جملة الشرط where :</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#math"
+                        data-link="math"
+                        >معاملات مقارنة اخرى تستخدم فى جملة الشرط where :</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#operator-precedence"
+                        data-link="operator-precedence"
+                        >المعاملات المنطقية فى جملة الشرط where :</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="ms-4">
+              <a
+                href="#show-activity"
+                class="text-white text-decoration-none aside-button"
+                data-link="show-activity"
+                >الأنشطة</a
+              >
+            </h4>
+          </div>
+        </aside>
+
+        <div class="content flex-grow-1 ps-1 ps-md-4">
+          <section id="main-goals" class="aside-section" data-link="main-goals">
+            <div class="main-goals">
+              <h2 class="text-center mb-4">
+                حصر وترتيب البيانات <br /><br />
+                Restricting and sorting data<br />
+              </h2>
+              <div class="mb-4">
+                <h3 class="mb-3">الهدف العام:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  استرجاع البيانات بشروط لها وترتيبها (حصر البيانات وترتيبها)
+                </p>
+              </div>
+
+              <div>
+                <h3 class="mb-3">الاهداف السلوكية:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  فى نهاية هذا الفصل لابد ان يكون الطالب قادرا على :
+                </p>
+                <ol class="mb-0 ms-5 fs-5">
+                  <li>تعرف جملة الشرط where لحصر البيانات.</li>
+                  <li>تستخدم جملة الترتيب order by.</li>
+                  <li>تعرف معاملات المقارنة المستخدمة فى جملة الشرط where.</li>
+                  <li>
+                    معاملات مقارنة اخرى (in,between,like…..) تستخدم فى جملة
+                    الشرط where.
+                  </li>
+                  <li>المعاملات المنطقية فى جملة الشرط where.</li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="general-formula"
+            class="aside-section"
+            data-link="general-formula"
+          >
+            <h3>مقدمة</h3>
+            <p class="ps-4 fs-5">
+              فى الفصل السابق تم التعرف على جملة SELECT الاساسية والتى من خلالها
+              يتم استرجاع البيانات من الجداول، ومن الملاحظ انه عند كتابة جملة
+              SELECT فى الفصل السابق كان الناتج دائما يكون جميع الصفوف الموجودة
+              بالجداول، فلو اردنا استرجاع اسماء الطلاب الذين حصلوا على درجة
+              معينة وتكون هذه الاسماء مرتبة تصاعديا أو تنازليا حسب الدرجة التى
+              حصل عليها كل منهم <br />
+              فماذا نعمل حتى نستطيع استرجاع الصفوف المطلوبة وترتيبها دون غيرها ؟
+              <br />
+              فى هذا الفصل سوف نستخدم جملة الشرط(WHERE) لحصر الصفوف على اساس شرط
+              معين، وأيضا ترتيب الصفوف تصاعديا او تنازليا باستخدام جملة (ORDER
+              BY).
+            </p>
+          </section>
+
+          <section
+            id="reqiurments"
+            class="aside-section"
+            data-link="reqiurments"
+          >
+            <h3>جملة الشرط (WHERE) :</h3>
+
+            <p class="ps-4 fs-5">
+              تكتب هذه الجملة مباشرة بعد جملة (FORM) وتستخدم فى حصر البيانات على
+              أساس شرط أو شروط معينة <br />
+              ويتكون الشرط من طرفين بينهم معامل مقارنة Comparison Operator
+              <br />
+              وعند تحقق الشرط أى ان الشرط (true) فان جملة select يكون لها ناتج
+              <br />
+              أما اذا كان ناتج الشرط غير متحقق(false) فان جملة select لايكون لها
+              أى ناتج وتظهر رسالة no row selected ومعناها لم يتم تحديد أى صف.
+            </p>
+            <h4>مكونات جملة الشرط where :</h4>
+            <div class="ps-4 fs-5">
+              <h5>يمكن أن تحتوى جملة الشرط (where) على مايلى :</h5>
+              <ol>
+                <li>اسماء الحقول columns.</li>
+                <li>معاملات مقارنة Comparison Operator.</li>
+                <li>قيم ثابتة سواء كانت عددية أو نصية.</li>
+                <li>تعبيرات حسابية.</li>
+              </ol>
+            </div>
+            <h4>متطلبات وارشادات كتابة جملة الشرط where.</h4>
+            <h5>يجب مراعاة الاتى عند كتابة جملة الشرط.</h5>
+            <li>
+              عند استخدام قيم نصية أو قيم تعبر عن تاريخ لابد من وضعها داخل علامة
+              التنصيص الفردية ' ' .
+            </li>
+            <li>
+              فى حالة استخدام القيم النصية لابد من مراعاة حالة الاحرف كبيرة ام
+              صغيرة.
+            </li>
+            <li>
+              فى حالة استخدام قيم تعبر عن تاريخ لابد من مراعاة صيغة التاريخ
+              المستخدمة (format) علما بأن الصيغة الاساسية للتاريخ داخل لغة sql
+              هى كالتالى: (dd-mm-yy ) حيث ان ( dd تعبر عن اليوم وmm تعبر عن
+              الشهر وyy تعبر عن السنة).
+            </li>
+          </section>
+
+          <section id="select" class="aside-section" data-link="select">
+            <h3>جملة الترتيب (order by)</h3>
+            <div class="ps-4 fs-5">
+              تستخدم هذه الجملة لترتيب الصفوف الناتجة ترتيبا تصاعديا أو تنازليا
+              ، وتكتب دائما فى نهاية جملة select.
+              <h4>متطلبات وارشادات كتابة جملة الترتيب order by:</h4>
+            </div>
+            <div class="ps-4 fs-5">
+              يجب مراعاة الاتى عند كتابة جملة الترتيب.
+              <li>يجب أن تكتب فى اخر جملة select.</li>
+              <li>تحتوى على اسماء حقول Columns أو أسماء مستعارة Alies.</li>
+              <li>
+                للترتيب تصاعديا أكتب (ASC) وهى اختصار لكلمة (Ascending) وهى
+                القيمة الافتراضية للترتيب.
+              </li>
+              <li>
+                للترتيب تنازليا لابد من كتابة (DESC) وهى اختصار لكلمة
+                Descending.
+              </li>
+            </div>
+
+            <div class="example-1">
+              <p class="ps-4 fs-5">
+                مثال(1): عرض الاسماء والتى يشترط أن تحمل اسم eman ويكون الترتيب
+                تصاعديا حسب المرتب.
+              </p>
+              <center>
+                <img
+                  src="/assets/images/eman.jpg"
+                  alt="describe-sql-query"
+                  class="describe-img-query mb-2"
+                />
+              </center>
+            </div>
+            <p class="ps-4 fs-5">
+              المثال (1) يبين طريقة استخدام جملة الشرط where <br />
+              وذلك لعرض الاسماء التى تحمل اسم eman فقط ، لاحظ أن جملة الشرط قد
+              احتوت على طرفين بينهما معامل حسابي وهو(=) ، وكانت النتيجة كما هى
+              واضحة فى المثال وذلك لأن جملة الششرط قد تحققت وكان هناك موظفون
+              يحملون نفس الاسم<br />
+              لاحظ أيضا أن الطرف الثانى من جملة الشرط 'eman' قد استخدمنا فيه
+              ثابتا نصيا ووضعنا هذا الثابت بين علامتى التنصيص الفردية<br />
+              وأيضا كتبت بالاحرف الصغيرة حيث يجب مراعاة حالة الاحرف بحيث تكون
+              مطابقة لحالة الاحرف فى الجدول، كما تم ترتيب الناتج تصاعديا بواسطة
+              order by.
+            </p>
+          </section>
+
+          <section id="alias" class="aside-section" data-link="alias">
+            <h3 class="mb-4">
+              معاملات المقارنة المستخدمة فى جملة الشرط where.
+            </h3>
+
+            <p class="ps-4 fs-5">
+              تستخدم معاملات المقارنة التالية للمقارنة بين طرفى الشرط فى جملة
+              where.
+            </p>
+            <center>
+              <img
+                src="/assets/images/coe.jpg"
+                alt="describe-sql-query"
+                class="describe-img-query mb-2"
+              />
+            </center>
+            <br />
+            <h4>الصيغة العامة لجملة الشرط where:</h4>
+            <center>
+              <img
+                src="/assets/images/op.jpg"
+                alt="describe-sql-query"
+                class="describe-img-query mb-2"
+              />
+            </center>
+            <br />
+            <p class="ps-4 fs-5">أمثلة مختلفة:</p>
+            <center>
+              <img
+                src="/assets/images/ex.jpg"
+                alt="describe-sql-query"
+                class="describe-img-query mb-2"
+              />
+            </center>
+            <br />
+            <p class="ps-4 fs-5">
+              مثال(2): عرض اسماء الموظفين الذين تزيد رواتبهم عن 200 جنيه.
+            </p>
+            <center>
+              <img
+                src="/assets/images/ex2.jpg"
+                alt="describe-sql-query"
+                class="describe-img-query mb-2"
+              />
+            </center>
+            <br />
+            <p class="ps-4 fs-5">
+              مثال(3): عرض أسماء ورواتب وعمولة الموظفين الذين تقل عمولتهم
+              أوتساوى الرواتب الخاصة بهم.ٍ
+            </p>
+            <center>
+              <img
+                src="/assets/images/ex3.jpg"
+                alt="describe-sql-query"
+                class="describe-img-query mb-2"
+              />
+            </center>
+            <br />
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم استخدام اسم عمود فى طرف جملة الشرط الايمن، اى
+              اننا من الممكن ان نستخدم أسماء الأعمدة للمقارنة مع أسماء أعمدة
+              اخرى<br />
+              وكانت النتيجة هى عرض بيانات الموظفين الذين رواتبهم اكبر من العمولة
+              الخاصة بهم.
+            </p>
+          </section>
+
+          <section id="math" class="aside-section" data-link="math">
+            <h3>معاملات مقارنة اخرى تستخدم فى جملة الشرط where:</h3>
+
+            <p class="ps-4 fs-5">
+              هناك معاملات مقارنة اخرى تستخدم فى جملة الشرط هذه المعاملات تسهل
+              عملية حصر البيانات بشكل أكبر، وهى كالتالى:
+            </p>
+
+            <center>
+              <img
+                src="/assets/images/coe2.jpg"
+                alt="describe-sql-query"
+                class="describe-img-query mb-2"
+              />
+            </center>
+
+            <div class="ps-4 fs-5">
+              <h5>
+                مثال(4): عرض أسماء الموظفين ورواتبهم الذين تنحصر رواتبهم بين 400
+                و 1000.
+              </h5>
+            </div>
+            <center>
+              <img
+                src="/assets/images/ex4.jpg"
+                alt="describe-sql-query"
+                class="describe-img-query mb-2"
+              />
+            </center>
+
+            <div class="ps-4 fs-5">
+              <p>
+                فى المثال السابق تم عرض بيانات الموظفين الذين تنحصر رواتبهم بين
+                400 و 1000
+              </p>
+              <p>
+                لاحظ أن القيمة 400 قد ظهرت فى النتيجة لأن ناتج جملة between
+                يشتمل على القيمة الصغرى والقيمة الكبرى
+              </p>
+              <p>
+                ونؤكد هنا على أن القيمة الصغرى لابد أن تكون أقل من القيمة الكبرى
+              </p>
+              <p>
+                فاذا عكسنا القيمة الكبرى مكان الصغرى (between 1000 and 400) فان
+                جملة الشرط لن تتحقق أى تكون قيمتها (false) وتظهر رسالة no row
+                selected ومعناها لم يتم تحديد اى الصف.
+              </p>
+            </div>
+            <div class="ps-4 fs-5">
+              <h5>
+                مثال(5): عرض رقم الالبوم ورقم المستخدم واسم الالبوم والذى قام
+                بصنعه المستخدمين اللذين يحملون الارقام التالية(1و2).
+              </h5>
+            </div>
+            <center>
+              <img
+                src="/assets/images/ex5.jpg"
+                alt="describe-sql-query"
+                class="describe-img-query mb-2"
+              />
+            </center>
+            <br />
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم استرجاع بيانات الالبومات التى قام بصنعها
+              المستخدمين (1و2)، وبهذا فان جملة IN تقوم بالبحث عن الرقم من بين
+              قائمة الارقام الموجودة داخل الاقواس.
+            </p>
+            <h3>معامل { % , _} LIKE .</h3>
+            <ul class="ps-4 fs-5">
+              يستخدم هذا المعامل للبحث عن نص معين داخل ثابت أو حقل نصي، حيث يتم
+              مطابقة حروف النص المذكورة فى جملة الشرط.
+              <li>يجب أن تكتب فى اخر جملة select.</li>
+              <li>
+                (%) هذا الرمز يعنى اى حرف أو احرف، مثلا التعبير(A%) يعنى مطابقة
+                النصوص التى تبدأ بحرف A مهما كانت باقى الحروف التالية له. فهو
+                يستخدم للبحث عن نص يبدأ بالحرف A.
+              </li>
+              <li>
+                التعبير(%A) يعنى مطابقة النصوص التى تنتهى بحرف A مهما كانت
+                الحروف التى تسبقه ويستخدم للبحث عن النصوص التى تنتهى بالحرف A.
+              </li>
+              <li>
+                التعبير %A% فهو يستخدم للبحث عن النصوص التى تحتوى على الحرفA.
+              </li>
+              <li>
+                ( _ ) هذا الرمز يعنى مطابقة حرف واحد فقط، فمثلا التعبير _A% يعنى
+                أنه بغض النظر عن الحرف الأول، ويستخدم هذا التعبير عندما نريد
+                البحث عن نص يكون الحرف الثانى فيه هو A.
+              </li>
+              <li>( _ _A) فيستخدم للبحث عن نص يكون الحرف الثالث فيه هو A.</li>
+            </ul>
+            <h3>ملحوظه :</h3>
+            <div class="ps-4 fs-5">
+              يجب مراعاة حالة الاحرف هل هى كبيرة ام صغيرة عند استخدام المعامل
+              like.
+              <h5>مثال(6): عرض اسماء الالبومات التى تبدأ بالحرف a.</h5>
+              <center>
+                <img
+                  src="/assets/images/ex6.jpg"
+                  alt="describe-sql-query"
+                  class="describe-img-query mb-2"
+                />
+              </center>
+              <br />
+              <h5>
+                مثال(7): عرض اسماء الموظفين اللذين لايوجد لديهم بدل تكليف.
+              </h5>
+              <center>
+                <img
+                  src="/assets/images/ex7.jpg"
+                  alt="describe-sql-query"
+                  class="describe-img-query mb-2"
+                />
+              </center>
+              <br />
+            </div>
+            <div class="ps-4 fs-5">
+              فى المثال السابق تم استخدام المعامل is null والذى يقوم بحصر
+              البيانات الخالية.
+              <h3>ملحوظه :</h3>
+            </div>
+            <p class="ps-4 fs-5">
+              لايمكن استخدام المعامل (=) مع القيم الخالية null ولكن لابد من
+              استخدام المعامل is null.
+            </p>
+          </section>
+
+          <section
+            id="operator-precedence"
+            class="aside-section"
+            data-link="operator-precedence"
+          >
+            <h3>المعاملات المنطقية فى جملة الشرط where:</h3>
+            <center>
+              <img
+                src="/assets/images/coe3.jpg"
+                alt="describe-sql-query"
+                class="describe-img-query mb-2"
+              />
+            </center>
+            <br />
+            <div class="ps-4 fs-5">
+              تستخدم المعاملات المنطقية التالية لتكوين اكثر من شرط فى جملة
+              where<br />
+              وهى معاملات تربط بين جملتين شرطيتين أو أكثر وتكون النتيجة اما
+              (true) اى تحقق الشرط أو (false) لم يتحقق الشرط.
+            </div>
+            <h3>المعامل AND.</h3>
+            <p class="ps-4 fs-5">
+              هذا المعامل يربط بين جملتين شرطيتين ويكون الناتج TRUE اذا كانت
+              كلتا الجملتين TRUE والجدول التالى يوضح ناتج المعامل AND مع الحالات
+              المختلفة لجملتي الشرط.
+
+              <center>
+                <img
+                  src="/assets/images/coe4.jpg"
+                  alt="describe-sql-query"
+                  class="describe-img-query mb-2"
+                />
+              </center>
+              <br />
+            </p>
+            <div class="ps-4 fs-5">
+              <h5>
+                مثال(8): عرض الموظفين اللذين يحصلون على بدل تكاليف اقل من 100
+                وفى نفس الوقت يحملون الاسم ايمان.
+              </h5>
+
+              <center>
+                <img
+                  src="/assets/images/ex8.jpg"
+                  alt="describe-sql-query"
+                  class="describe-img-query mb-2"
+                />
+              </center>
+              <br />
+            </div>
+            <h3>المعامل OR:</h3>
+            <div class="ps-4 fs-5">
+              هذا المعامل يربط بين جملتين شرطيتين ويكون الناتج TRUE اذا كانت
+              احدى الجملتين أو كلاهما TRUE، والجدول التالى يوضح نلتج المعامل OR
+              مع الحالات ا لمختلفة لجملتي الشرط.
+              <center>
+                <img
+                  src="/assets/images/coe5.jpg"
+                  alt="describe-sql-query"
+                  class="describe-img-query mb-2"
+                />
+              </center>
+              <br />
+            </div>
+            <div class="ps-4 fs-5">
+              <h5>
+                مثال (9): عرض الموظفين اللذين يحصلون على بدل تكاليف اقل من 100
+                أو يحملون الاسم شعبان.
+              </h5>
+              <center>
+                <img
+                  src="/assets/images/ex9.jpg"
+                  alt="describe-sql-query"
+                  class="describe-img-query mb-2"
+                />
+              </center>
+              <br />
+            </div>
+            <p class="ps-4 fs-5">
+              فى المثال السابق يبين أنه لابد من تحقيق أى من الجملتين حتى يتم
+              استرجاع بيانات، وبالتدقيق فى النتيجة نجد أنه بالرغم من الاسم غير
+              مطابق الا أنه ظهر فى النتيجة وذلك لتحقق شرط بدل التكاليف، اى أنه
+              يجب أن يتحقق أحد الشرطين لاسترجاع البيانات.
+            </p>
+            <h3>المعامل NOT:</h3>
+            <p class="ps-4 fs-5">
+              هذا المعامل يقوم بعكس ناتج جملة الشرط ، اى أنه اذا كانت جملة الشرط
+              TRUE فان ناتج المعامل NOT يكون FALSE والعكس، والجدول التالى يبين
+              تأثير هذا المعامل على جملة الشرط.
+            </p>
+            <center>
+              <img
+                src="/assets/images/coe6.jpg"
+                alt="describe-sql-query"
+                class="describe-img-query mb-2"
+              />
+            </center>
+            <br />
+            <div class="ps-4 fs-5">
+              ويستخدم المعامل NOT أيضا لنفى المعاملات الموضحة بالجدول التالى:
+              <center>
+                <img
+                  src="/assets/images/coe7.jpg"
+                  alt="describe-sql-query"
+                  class="describe-img-query mb-2"
+                />
+              </center>
+              <br />
+            </div>
+            <h5>
+              مثال(10): عرض الموظفين اللذين لاتنحصر رواتبهم بين 500 و 1000.
+            </h5>
+            <center>
+              <img
+                src="/assets/images/ex10.jpg"
+                alt="describe-sql-query"
+                class="describe-img-query mb-2"
+              />
+            </center>
+            <br />
+            <div class="ps-4 fs-5">
+              فى المثال السابق تم استبعاد الموظفين الذين تنحصر رواتبهم بين 500 و
+              1000 وتم عرض باقى الموظفين، وبذلك قد تم نفى المعامل (between
+              ….and…..)
+              <h5>مثال(11): عرض الموظفين الذين يأخذون عمولة.</h5>
+              <center>
+                <img
+                  src="/assets/images/ex11.jpg"
+                  alt="describe-sql-query"
+                  class="describe-img-query mb-2"
+                />
+              </center>
+              <br />
+            </div>
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم عرض بيانات الموظفين الذين يأخذون عمولة، اى
+              الذين ليست عمولتهم خالية null.
+            </p>
+          </section>
+
+          <section
+            id="show-activity"
+            class="aside-section"
+            data-link="show-activity"
+          ></section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/module.js" type="module"></script>
+  </body>
+</html>

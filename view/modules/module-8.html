@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/aside.css" />
+    <link rel="stylesheet" href="/css/module.css" />
+
+    <title>الوحده الثامنه</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="container-xxl d-flex align-items-start">
+        <aside
+          class="bg-main-color text-white rounded-top p-1 py-sm-3 px-sm-1 d-none d-md-block"
+        >
+          <div class="accordion" id="accordionExample">
+            <h3 class="ms-4">
+              <a
+                href="#main-goals"
+                class="text-white text-decoration-none aside-button"
+                data-link="main-goals"
+                >الأهداف</a
+              >
+            </h3>
+
+            <div class="accordion-item accordion-content">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  الموضوعات
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body p-1 p-md-2 p-lg-3">
+                  <ul>
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#introduction"
+                        data-link="introduction"
+                        >مقدمه</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#general-formula"
+                        data-link="general-formula"
+                        >الصيغه العامه لجمله الاستعلامات الفرعيه متعددة
+                        الاعمده</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#null"
+                        data-link="null"
+                        >نتيجه الاستعلام الرئيسى عندما يرجع الاستعلام الفرعى
+                        بالقيمهNULL</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="m-4">
+              <a
+                href="#show-activity"
+                class="text-white text-decoration-none aside-button"
+                data-link="show-activity"
+                >الأنشطة</a
+              >
+            </h3>
+          </div>
+        </aside>
+
+        <div class="content flex-grow-1 ps-1 ps-md-4">
+          <section id="main-goals" class="aside-section" data-link="main-goals">
+            <div class="main-goals">
+              <h2 class="text-center mb-4">
+                الاستعلام الفرعى المتعدد الأعمدة Multiple-column subqueries
+              </h2>
+              <div class="mb-4">
+                <h3 class="mb-3">الهدف العام:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  تمكين المتعلم من فهم وإنشاء الاستعلامات الفرعية متعددة الأعمدة
+                  في قواعد البيانات واستخدامها بفعالية لحل مشكلات معقدة تتطلب
+                  جلب بيانات مترابطة من أكثر من عمود
+                </p>
+              </div>
+
+              <div>
+                <h3 class="mb-3">الاهداف السلوكية:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  فى نهاية هذا الفصل لابد ان يكون الطالب قادرا على :
+                </p>
+                <ol class="mb-0 ms-5 fs-5">
+                  <li>
+                    ان يذكر الصيغه العامة لجملة الاستعلامات الفرعية متعددة
+                    الاعمدة
+                  </li>
+                  <li>
+                    أن يحدد المتعلم نتيجة الاستعلام الرئيسي عند رجوع الاستعلام
+                    الفرعي بالقيمة NULL.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="introduction"
+            class="aside-section"
+            data-link="introduction"
+          >
+            <h3>مقدمه</h3>
+
+            <p class="fs-5 ps-4">
+              فى الفصل السابق تم معرفة نوعين من الاستعلامات الفرعية النوع الأول
+              كان الاستعلام الفرعى ذو الصف والذى يرجع دائما بصف واحد، أما النوع
+              الاخر فهو الاستعلام متعدد الصفوف الذى يرجع بأكثر من صف، ويوجد نوع
+              ثالث من الاستعلامات وهو الاستعلام متعدد الأعمدة والذى يرجع بأكثر
+              من عمود وأكثر من صف ولمقارنة ناتج هذا النوع لابد من استخدام
+              المعاملات متعددة الصفوف والتى تم دراستها فى القصل السابق.
+            </p>
+
+            <p class="fs-5 ps-4">
+              والشكل التالى يبين الصيغة العامة التى نستخدمها فى كتابة هذا النوع
+              من الاستعلامات.
+            </p>
+          </section>
+
+          <section
+            id="general-formula"
+            class="aside-section"
+            data-link="general-formula"
+          >
+            <h3>
+              أولا: الصيغة العامة لجملة الاستعلامات الفرعية متعددة الأعمدة:
+            </h3>
+
+            <img src="/assets/images/module-8-1.jpg" alt="" />
+
+            <p class="ps-4 fs-5">
+              نلاحظ أن الاستعلام الفرعى يرجع بأكثر من عمود والتى يتم مقارنتها
+              بالأعمدة الموجودة فى جملة where.
+            </p>
+
+            <h3>مثال(1):</h3>
+
+            <p class="ps-4 fs-5">
+              فى هذا المثال نريد عرض رقم الالبوم و الوقت والامتداد ورقم الصورة
+              والتى لها نفس رقم المستخدم.
+            </p>
+
+            <p class="ps-4 fs-5">
+              أولا: عمل استعلام فرعى متعدد الأعمدة لايجاد رقم الالبوم والامتداد
+              للصور التى قام المستخدم رقم 4 بإنشائها.
+            </p>
+
+            <img src="/assets/images/module-8-2.jpg" alt="" />
+
+            <p class="ps-4 fs-5">
+              ثانيا: عمل استعلام رئيسي يتم فيه مقارنه رقم الالبوم والامتداد برقم
+              الالبوم والامتداد للمستخدم 4 كالأتى:
+            </p>
+
+            <img src="/assets/images/module-8-3.jpg" alt="" />
+
+            <h3>مثال اخر:</h3>
+
+            <img src="/assets/images/module-8-4.jpg" alt="" />
+          </section>
+
+          <section id="select" class="aside-section" data-link="select">
+            <h3>
+              ثانيا: نتيجة الاستعلام الرئيسي عندما يرجع الاستعلام الفرعي بالقيمة
+              null
+            </h3>
+
+            <p class="ps-4 fs-5">
+              عندما تكون نتيجة الاستعلام الفرعي null أى أنه لاتوجد نتيجة
+              للاستعلام الفرعى، فى هذه الحالة لايكون للاستعلام الرئيسي أى نتيجة
+              ويعطى الرسالة التالية:
+            </p>
+
+            <p class="fs-5">
+              (no rows selected) وتعنى أنه لاتوجد أى صفوف مطابقة للشرط فى جملة
+              where الموجودة داخل الاستعلام الرئيسي، والمثال التالى يبين ذلك:
+            </p>
+
+            <h3>مثال(2):</h3>
+
+            <p class="fs-5">
+              اعرض رقم الالبوم ووقت الانشاء وامتداد الصورة ورقم الصورة التى قام
+              المستخدم رقم 7 بانشائها.
+            </p>
+
+            <img src="/assets/images/module-8-5.jpg" alt="" />
+
+            <p class="fs-5">
+              هنا كانت نتيجة الاستعلام الفرعى null لعدم وجود الطلب ذى الرقم 7
+              مسجل داخل الجدول، ولهذا كانت نتيجة الاستعلام الرئيسي رسالة تبين
+              بأنه لاتوجد أى صفوف تم اختيارها.
+            </p>
+          </section>
+
+          <section
+            id="show-activity"
+            data-link="show-activity"
+            class="aside-section"
+          ></section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/module.js" type="module"></script>
+  </body>
+</html>

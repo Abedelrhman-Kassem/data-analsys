@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/aside.css" />
+    <link rel="stylesheet" href="/css/module.css" />
+
+    <title>الوحدة السادسة</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="container-xxl d-flex align-items-start">
+        <aside
+          class="bg-main-color text-white rounded-top p-1 py-sm-3 px-sm-1 d-none d-md-block"
+        >
+          <div class="accordion" id="accordionExample">
+            <h3 class="ms-4">
+              <a
+                href="#main-goals"
+                class="text-white text-decoration-none aside-button"
+                data-link="main-goals"
+                >الأهداف</a
+              >
+            </h3>
+
+            <div class="accordion-item accordion-content">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  الموضوعات
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body p-1 p-md-2 p-lg-3">
+                  <ul>
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#general-formula"
+                        data-link="general-formula"
+                        >كيفية عرض البيانات من أكثر من جدول ومفهوم ربط
+                        الجداول.</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#reqiurments"
+                        data-link="reqiurments"
+                        >الربط بالتساوى بين الجدولين equijoin.</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#select"
+                        data-link="select"
+                        >استخدام الأسماء المستعارة للجداول.</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <h4 class="m-4">
+              <a
+                href="#show-activity"
+                class="text-white text-decoration-none aside-button"
+                data-link="show-activity"
+                >الأنشطة</a
+              >
+            </h4>
+          </div>
+        </aside>
+
+        <div class="content flex-grow-1 ps-1 ps-md-4">
+          <section id="main-goals" class="aside-section" data-link="main-goals">
+            <div class="main-goals">
+              <h2 class="text-center mb-4">
+                عرض البيانات من أكثر من جدول <br />
+                Displaying data from multiple tables
+              </h2>
+              <div class="mb-4">
+                <h3 class="mb-3">الهدف العام:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  معرفة كيفية عرض البيانات واسترجاعها من أكثر من جدول عن طريق
+                  الطرق المختلفة لربط الجداول &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                  مع بعضها.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="mb-3">الأهداف السلوكية:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  فى نهاية هذا الفصل لابد أن يكون الطالب قادراً على أن :
+                </p>
+                <ol class="mb-0 ms-5 fs-5">
+                  <li>
+                    يتعرف على كيفية عرض البيانات من أكثر من جدول ومفهوم ربط
+                    الجداول.
+                  </li>
+                  <li>يستخدم الربط بالتساوى بين الجدولين equijoin.</li>
+                  <li>
+                    يستخدم الأسماء المستعارة للجداول عند الربط بين جدولين أو
+                    أكثر.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="general-formula"
+            class="aside-section"
+            data-link="general-formula"
+          >
+            <h3>كيفية عرض البيانات من أكثر من جدول ومفهوم ربط الجداول :</h3>
+            <br />
+
+            <p class="fs-5 d-flex mb-2">
+              فى بعض الأحيان نريد أن نقوم بعرض بيانات من أكثر من جدول لعمل
+              تقارير مفيدة وشاملة، فمثلا لو أردنا عرض رقم المستخدم ورقم الألبوم
+              الذى قام بانشاءه ووصف لهذا الألبوم نجد أننا لابد من الحصول على هذه
+              البيانات من جدول المستخدمين وجدول الألبومات لكون رقم المستخدم
+              موجود فى جدول المستخدمين ورقم الألبوم موجود فى جدول الألبومات،
+              بينما وصف الالبومات موجود فى جدول الألبومات، كما هو موضح بالشكل
+              التالى:
+            </p>
+
+            <img
+              src="/assets/images/1.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+
+            <p class="fs-5 d-flex mb-2">
+              وللحصول على تلك البيانات لابد من عمل ربط بين الجدولين، وسوف نقوم
+              فى هذا الفصل بشرح أنواع الربط المختلفة وكيفية عمل كل نوع من هذه
+              الأنواع.
+            </p>
+            <br />
+            <h3>تعريف الربط join definition :</h3>
+            <p class="fs-5 d-flex mb-2">
+              هو عبارة عن ربط بين جدولين أو أكثر للحصول على بيانات من تلك
+              الجداول.
+            </p>
+          </section>
+
+          <section
+            id="reqiurments"
+            class="aside-section"
+            data-link="reqiurments"
+          >
+            <h3>الربط بالتساوى equijoin :</h3>
+            <br />
+
+            <p class="ps-4 fs-5">
+              فى هذا النوع من الربط يتم ربط جدولين أو أكثر عن طريق عمودين
+              متساويين، العمود الأول عادة مايكون مفتاح أساس primary key فى
+              الجدول الأول والعمود الثانى يكون عبارة عن عمود ربط foreign key فى
+              الجدول الثانى.<br />
+              والشكل التالى يبين الربط بالتساوى بين جدول المستخدمين وجدول
+              الالبومات عن طريق العمود user_id الموجود فى كل منهم.
+            </p>
+
+            <img
+              src="/assets/images/2.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+
+            <p class="ps-4 fs-5">
+              سوف يتم عمل الربط بين الجدولين باستخدام جملة select عن طريق
+              العمودين المشار اليهما بالسهم، كما فى المثال التالى:
+            </p>
+
+            <p class="ps-4 fs-5">مثال (1):</p>
+            <img
+              src="/assets/images/ex1.6.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم عرض بيانات من جدولين عن طريق الربط بالتساوى،
+              وسوف نقوم بشرح كل جزء من أجزاء جملة select على حدا كالتالى:
+            </p>
+            <ol class="fs-5">
+              <li class="mb-2">
+                فى قائمة select تم عرض رقم المستخدم واسمه من جدول المستخدمين،
+                ورقم الالبوم ووصفه من جدول الالبومات، ونلاحظ هنا أننا حددنا من
+                أين تأتى البيانات عن طريق كتابة اسم الجدول قبل اسم العمود ويفصل
+                بينهما (.) كالتالى (users.name)
+              </li>
+              <li class="mb-2">
+                فى الجزء from تم كتابة أسماء الجداول التى ستأتى منها البيانات.
+              </li>
+              <li class="mb-2">
+                فى الجزء where تم كتابة شرط الربط بين الجدولين وهذا الشرط مهم
+                جدا لاتمام عملية الربط ، وبدون هذا الشرط سوف تكون النتيجة ليس
+                لها معنى أو فائدة.
+              </li>
+            </ol>
+            <p class="ps-4 fs-5">
+              وعندما نريد عرض البيانات الموجودة فى المثال ولكن للمستخدم eman فقط
+              فاننا هنا لابد من زيادة شرط على جملة select كالتالى:
+            </p>
+            <img
+              src="/assets/images/ex2.6.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+          </section>
+
+          <section id="select" class="aside-section" data-link="select">
+            <h3>استخدام الأسماء المستعارة للجداول :</h3>
+            <p class="ps-4 fs-5">
+              يمكن استخدام الاسماء المستعارة للجداول لتسهل عملية كتابة الأعمدة،
+              فمثلا نقوم باستبدال اسم الجدول users بالحرف u واسم الجدول albums
+              بالحرف a كالتالى:
+            </p>
+            <img
+              src="/assets/images/3.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+          </section>
+
+          <section
+            id="show-activity"
+            class="aside-section"
+            data-link="show-activity"
+          ></section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/module.js" type="module"></script>
+  </body>
+</html>

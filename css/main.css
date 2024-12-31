@@ -1,0 +1,75 @@
+:root {
+  --main-color: #005d85;
+}
+
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+.bg-main-color {
+  background-color: var(--main-color) !important;
+}
+
+.text-indent {
+  text-indent: 2.7rem;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.rounded-4 {
+  border-radius: 0.6rem !important;
+  -webkit-border-radius: 0.6rem !important;
+  -moz-border-radius: 0.6rem !important;
+  -ms-border-radius: 0.6rem !important;
+  -o-border-radius: 0.6rem !important;
+}
+
+.rounded-5 {
+  border-radius: 0.8rem !important;
+  -webkit-border-radius: 0.8rem !important;
+  -moz-border-radius: 0.8rem !important;
+  -ms-border-radius: 0.8rem !important;
+  -o-border-radius: 0.8rem !important;
+}
+
+.rounded-6 {
+  border-radius: 1rem !important;
+  -webkit-border-radius: 1rem !important;
+  -moz-border-radius: 1rem !important;
+  -ms-border-radius: 1rem !important;
+  -o-border-radius: 1rem !important;
+}
+
+img {
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+.letter-spacing-en {
+  letter-spacing: 1px;
+}
+
+.fit-content {
+  width: fit-content;
+}
+
+@media (width < 991px) {
+  html {
+    font-size: 13px !important;
+  }
+}
+
+@media (width < 576px) {
+  html {
+    font-size: 12px !important;
+  }
+}
+
+@media (width < 430px) {
+  html {
+    font-size: 10px !important;
+  }
+}

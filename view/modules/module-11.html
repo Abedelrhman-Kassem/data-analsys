@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/aside.css" />
+    <link rel="stylesheet" href="/css/module.css" />
+
+    <title>الوحده الحادي عشر</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="container-xxl d-flex align-items-start">
+        <aside
+          class="bg-main-color text-white rounded-top p-1 py-sm-3 px-sm-1 d-none d-md-block"
+        >
+          <div class="accordion" id="accordionExample">
+            <h3 class="ms-4">
+              <a
+                href="#main-goals"
+                class="text-white text-decoration-none aside-button"
+                data-link="main-goals"
+                >الأهداف</a
+              >
+            </h3>
+
+            <div class="accordion-item accordion-content">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  الموضوعات
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body p-1 p-md-2 p-lg-3">
+                  <ul>
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#constrains-means"
+                        data-link="constrains-means"
+                        >معنى القيود التى تطبق على الجداول
+                      </a>
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#constrains-type"
+                        data-link="constrains-type"
+                        >انواع القيود constraints</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#create-constrain"
+                        data-link="create-constrain"
+                        >انشاء القيود creat constraint</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#primary-key"
+                        data-link="primary-key"
+                        >القيد primary key</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#unique-key"
+                        data-link="unique-key"
+                        >االقيد unique key</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#foreign-key"
+                        data-link="foreign-key"
+                        >القيد foreign key</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#check"
+                        data-link="check"
+                        >القيد check</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="m-4">
+              <a
+                href="#show-activity"
+                class="text-white text-decoration-none aside-button"
+                data-link="show-activity"
+                >الأنشطة</a
+              >
+            </h3>
+          </div>
+        </aside>
+
+        <div class="content flex-grow-1 ps-1 ps-md-4">
+          <section id="main-goals" class="aside-section" data-link="main-goals">
+            <div class="main-goals">
+              <h2 class="text-center mb-4">القيود على الجداول CONSTRAINTS</h2>
+              <div class="mb-4">
+                <h3 class="mb-3">الهدف العام:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  توضيح مفهوم القيود(constraints ) فى قواعد البيانات ودورها فى
+                  ضمان دقه البيانات وسلامتها
+                </p>
+              </div>
+
+              <div>
+                <h3 class="mb-3">الاهداف السلوكية:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  فى نهاية هذا الفصل لابد ان يكون الطالب قادرا على :
+                </p>
+                <ol class="mb-0 ms-5 fs-5">
+                  <li>ان يعرف مفهوم القيود التي تطبق على الجداول</li>
+                  <li>ان يذكر انواع القيود constraints</li>
+                  <li>ان ينشئ القيود create constraint على الجداول</li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="constrains-means"
+            class="aside-section"
+            data-link="constrains-means"
+          >
+            <h3>أولا: معنى القيود التى تطبق على الجداول:</h3>
+
+            <p class="fs-5 ps-4">
+              القيود هى عبارة عن شروط معينة توضع على الجداول لتنظيم العمليات
+              المختلفة التى تتم على الجداول مثل الاضافة والتعديل والحذف، فمثلا
+              عندما ننشئ جدولا جديدا للموظفين ويتضمن هذا الجدول عمودا لتخزين رقم
+              الموظف، وعندما نريد اضافة موظف الى هذا الجدول ربما نضيف بيانات
+              موظف جديد ويكون رقمه مثلا (100) ويكون هناك موظف مسجل بنفس الرقم
+              داخل الجدول، فى هذه الحالة يتم تخزين الرقم (100) فى عمود (رقم
+              الموظف) مرتين ،أى اننا قمنا بتسجيل موظفين برقم واحد ، وهذا غير
+              منطقى أن يتم تسجيل موظفين أو اكثر برقم واحد، ولهذا فاننا نقوم بعمل
+              قيد على العمود (رقم الموظف) حتى لايقبل رقم مكرر.
+            </p>
+
+            <p class="fs-5 ps-4">
+              وسوف نتناول فى هذا الفصل الأنواع المختلفة من القيود وكيفية تطبيقها
+              على الجداول.
+            </p>
+          </section>
+
+          <section
+            id="constrains-type"
+            class="aside-section"
+            data-link="constrains-type"
+          >
+            <h3>ثانيا: أنواع القيود constraints:</h3>
+
+            <img src="/assets/images/module-11-1.jpg" alt="" />
+
+            <p class="ps-4 fs-5">
+              هناك أيضا: unsigned يعنى بيانات رقمية موجبة.
+            </p>
+          </section>
+
+          <section
+            id="create-constrain"
+            class="aside-section"
+            data-link="create-constrain"
+          >
+            <h3>ثالثا: انشاء القيود create constrait:</h3>
+
+            <ul class="fs-5">
+              تنشأ القيود بطريقيتن هما:
+              <li class="ms-4">عمل القيود اثناء انشاء الجدول.</li>
+              <li class="ms-4">عمل القيود بعد انشاء الجدول.</li>
+            </ul>
+
+            <p class="fs-5 ps-4">
+              وتطبق القيود على مستوى الاعمدة او على مستوى الجدول، كما سنوضح ذلك
+              من خلال الأمثلة.
+            </p>
+          </section>
+
+          <section
+            id="primary-key"
+            class="aside-section"
+            data-link="primary-key"
+          >
+            <h3>القيد primary key :</h3>
+
+            <p class="ps-4 fs-5">
+              هذا القيد يتم انشاؤه على مستوى العمود أو على مستوى الجدول، ومعنى
+              هذا القيد هو انشاء مفتاح اساسي داخل الجدول وذلك لتمييز عمود معين
+              بحيث ان هذا العمود يكون له خاصيتن هما:
+            </p>
+
+            <ol class="fw-bold">
+              <li class="ms-4">عدم قبول تكرار القيم داخله.</li>
+              <li class="ms-4">عدم السماح بترك قيمة فارغة null.</li>
+            </ol>
+
+            <p class="fs-5 ps-4">
+              فمثلا اذا اردنا تمييز المتدربين فاننا نميزهم عن طريق الرقم
+              الاكاديمى فهذا الرقم يجب أن يكون رقما وحيدا لايتكرر فكل متدرب يحمل
+              رقما أكاديميا وحيدا خاصا به وأيضا يجب أن يكون لكل متدرب رقم
+              اكاديمي فليس من المعقول أن تسجل بيانات متدرب دون تسجيل رقمه،
+              ولتحقيق ذلك نقوم بعمل عمود داخل جدول المتدربين ونطبق عليه القيد
+              primary key.
+            </p>
+
+            <h3>مثال(1):</h3>
+
+            <p class="fs-5 ps-4">
+              انشاء القيود اثناء انشاء الجدول وتطبيقها على مستوى الأعمدة:
+            </p>
+
+            <img src="/assets/images/module-11-2.jpg" alt="" />
+
+            <p class="fs-5 ps-4">
+              فى المثال السابق تم انشاء جدول ee كما تم انشاء قيدين على العمودين
+              emp_no,emp_name القيد الاول هو primary key على العمود emp_no لجعل
+              هذا العمود (مفتاح اساسي) داخل الجدول، حيث ان رقم الموظف يجب أن
+              لايتكرر داخل العمود وأيضا عدم ترك قيمته فارغة.
+            </p>
+
+            <p class="fs-4 ps-4">
+              أما القيد الثانى not null على العمود emp_name يمنع ترك قيمة هذا
+              العمود فارغة بدون بيانات فلابد من ادخال اسم الموظف، والجدير بالذكر
+              هنا أن القيد not null يطبق فقط على مستوى العمود أى أننا لانستطيع
+              تطبيقه على مستوى الجدول.
+            </p>
+
+            <h3>مثال(2):</h3>
+
+            <p class="fs-4 ps-4">
+              انشاء القيود اثناء انشاء الجدول وتطبيقها على مستوى الجدول.
+            </p>
+
+            <img src="/assets/images/module-11-3.jpg" alt="" />
+
+            <p class="fs-4 ps-4">
+              فى المثال السابق تم انشاء الجدول كما تم انشاء قيد primary key على
+              مستوى الجدول كما هو موضح فى السطر المظلل، والفرق بين هذه الطريقة
+              والطريقة المستخدمة فى المثال رقم (1) هو اننا نستطيع حذف القيد اذا
+              كان على مستوى الجدول، ونلاحظ فى هذا المثال أننا اسمينا القيد بـ
+              eeee وبهذا يمكن حذفه بسهوله كما سنرى لاحقا.
+            </p>
+          </section>
+
+          <section id="unique-key" class="aside-section" data-link="unique-key">
+            <h3>القيد unique key:</h3>
+
+            <p class="ps-4 fs-5">
+              هذا القيد يتم انشاؤه على مستوى العمود أو على مستوى الجدول، ومعنى
+              هذا القيد هو عدم السماح بتكرار القيم داخل العمود.
+            </p>
+
+            <h3>مثال(3):</h3>
+
+            <p class="ps-4 fs-5">
+              انشاء القيد unique اثناء انشاء الجدول وتطبيقه على مستوى الجدول.
+            </p>
+
+            <img src="/assets/images/module-11-4.jpg" alt="" />
+
+            <p class="ps-4 fs-5">
+              فى المثال السابق تم انشاء الجدول كما تم انشاء قيد unique على
+              العمود emp_name وذلك بغرض عدم تكرار اسم الموظف داخل الجدول، ونلاحظ
+              اننا طبقنا القيد على مستوى الجدول ويمكن تطبيقه على مستوى العمود.
+            </p>
+          </section>
+
+          <section
+            id="foreign-key"
+            class="aside-section"
+            data-link="foreign-key"
+          >
+            <h3>القيد foreign key:</h3>
+
+            <p class="ps-4 fs-5">
+              هذا القيد يتم انشاؤه على مستوى العمود أو على مستوى الجدول، ويستخدم
+              هذا القيد عندما نريد ربط جدولين ببعض، فمثلا لربط جدول المستخدمين
+              بجدول الالبومات بغرض معرفة المستخدمين الذين انشأوا البومات معينة،
+              فانه لابد من وجود عمود (primary key) داخل جدول المستخدمين ونفس هذا
+              العمود يوجد فى جدول الألبومات ويسمى foreign key كما فى الشكل
+              التالى:
+            </p>
+
+            <img src="/assets/images/module-11-5.jpg" alt="" />
+          </section>
+
+          <section id="check" class="aside-section" data-link="check">
+            <h3>القيد check:</h3>
+
+            <p class="ps-4 fs-5">
+              هذا القيد يتم انشاؤه على مستوى العمود أو على مستوى الجدول، ويستخدم
+              هذا القيد عندما نريد تحديد مجال قيم معينة لعمود فى الجدول، فمثلا
+              اذا اردنا أن نحدد القيم المدخلة للعمود user_id داخل جدول
+              المستخدمين بحيث تكون محصورة بين (1......99) فاننا نطبق هذا القيد
+              كما هو واضح فى المثال التالى:
+            </p>
+
+            <h3>مثال (4):</h3>
+
+            <p class="ps-4 fs-5">
+              انشاء القيد check على العمود emp_no وتطبيقه على مستوى الجدول.
+            </p>
+
+            <img src="/assets/images/module-11-6.jpg" alt="" />
+          </section>
+
+          <section
+            id="show-activity"
+            class="aside-section"
+            data-link="show-activity"
+          ></section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/module.js" type="module"></script>
+  </body>
+</html>

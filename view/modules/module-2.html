@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/aside.css" />
+    <link rel="stylesheet" href="/css/module.css" />
+
+    <title>الوحده الثانيه</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+      <div class="container-xxl d-flex align-items-start">
+        <aside
+          class="bg-main-color text-white rounded-top p-1 py-sm-3 px-sm-1 d-none d-md-block"
+        >
+          <div class="accordion" id="accordionExample">
+            <h3 class="ms-4">
+              <a
+                href="#main-goals"
+                class="text-white text-decoration-none aside-button"
+                data-link="main-goals"
+                >الأهداف</a
+              >
+            </h3>
+
+            <div class="accordion-item accordion-content">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                  aria-expanded="false"
+                  aria-controls="collapseOne"
+                >
+                  الموضوعات
+                </button>
+              </h2>
+              <div
+                id="collapseOne"
+                class="accordion-collapse collapse"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body p-1 p-md-2 p-lg-3">
+                  <ul>
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#general-formula"
+                        data-link="general-formula"
+                        >الصيغة العامة لجملة SELECT</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#reqiurments"
+                        data-link="reqiurments"
+                        >متطلبات وارشادات كتابة جمل SQL:</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#select"
+                        data-link="select"
+                        >تسترجع البيانات من الجدول بواسطة جملة SELECT</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#alias"
+                        data-link="alias"
+                        >استرجاع الحقول بأسماء مستعارة (Aliases):</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#math"
+                        data-link="math"
+                        >استخدام العمليات الحسابية وأولويات تنفيذها مع جملة
+                        select:</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#operator-precedence"
+                        data-link="operator-precedence"
+                        >أولويات تنفيذ العوامل الحسابية operator precedence:</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#distinct"
+                        data-link="distinct"
+                        >استخدام عبارة distinct لمنع تكرار السجلات:</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#describe"
+                        data-link="describe"
+                        >إظهار البناء الداخلى للجداول باستخدام الامر
+                        DESCRIBE(DESC)</a
+                      >
+                    </li>
+
+                    <li class="mb-1">
+                      <a
+                        class="text-decoration-none text-white aside-button"
+                        href="#null"
+                        data-link="null"
+                        >التعامل مع القيمة NULL</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <h4 class="ms-4">
+              <a
+                href="#show-activity"
+                class="text-white text-decoration-none aside-button"
+                data-link="show-activity"
+                >الأنشطة</a
+              >
+            </h4>
+          </div>
+        </aside>
+
+        <div class="content flex-grow-1 ps-1 ps-md-4">
+          <section id="main-goals" class="aside-section" data-link="main-goals">
+            <div class="main-goals">
+              <h2 class="text-center mb-4">جملة (SELECT) الأساسية</h2>
+              <div class="mb-4">
+                <h3 class="mb-3">الهدف العام:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  معرفة جملة SELECT الاساسية وأجزائها المختلفة وكيفية التعامل
+                  معها.
+                </p>
+              </div>
+
+              <div>
+                <h3 class="mb-3">الاهداف السلوكية:</h3>
+                <p class="text-indent ms-3 fs-5">
+                  فى نهاية هذا الفصل لابد ان يكون الطالب قادرا على :
+                </p>
+                <ol class="mb-0 ms-5 fs-5">
+                  <li>ان يذكر الصيغة العامة لجملة SELECT.</li>
+                  <li>ان يذكر متطلبات جمل SELECT.</li>
+                  <li>ان يسترجع البيانات من الجدول بواسطة جملة SELECT.</li>
+                  <li>ان يسترجع الحقول بأسماء مستعارة.</li>
+                  <li>ان يستخدم العمليات الحسابية.</li>
+                  <li>ان يذكر اولويات تنفيذ العمليات الحسابية.</li>
+                  <li>ان يستخدم عبارة distinct لمنع تكرار السجلات.</li>
+                  <li>ان يظهر البناء الداخلى للجدول.</li>
+                  <li>ان يستخدم القيمة NULL.</li>
+                </ol>
+              </div>
+            </div>
+          </section>
+
+          <section
+            id="general-formula"
+            class="aside-section"
+            data-link="general-formula"
+          >
+            <h3>تفسير الصيغة العامة :</h3>
+
+            <pre
+              class="bg-dark text-white fit-content p-3 rounded-4 fw-bold my-4 mx-auto fs-6"
+            >
+<span class="text-success">SELECT</span>     * or Columns
+<span class="text-success">FROM</span>       table
+<span class="text-success">WHERE</span>      Condintion or Condintions
+<span class="text-success">ORDER BY</span>   Column or Alias  [ASC or DESC] ;
+</pre>
+
+            <p class="fs-5 d-flex mb-2">
+              <span class="sql-query text-center fw-bold">SELECT </span>
+              <span
+                >: تستخدم فى بداية الأمر لاسترجاع البيانات من الجداول.
+              </span>
+            </p>
+
+            <p class="fs-5 d-flex mb-2">
+              <span class="sql-query text-center fw-bold">* </span>
+              <span
+                >: هذا الرمز يستخدم عند استرجاع جميع الحقول من الجدول.
+              </span>
+            </p>
+
+            <p class="fs-5 d-flex mb-2">
+              <span class="sql-query text-center fw-bold">Columns </span>
+              <span>: اسم الحقل أوالحقول المراد استرجاعها من الجدول. </span>
+            </p>
+
+            <p class="fs-5 d-flex mb-2">
+              <span class="sql-query text-center fw-bold">FROM </span>
+              <span>: تستخدم للاعلان عن اسم الجدول. </span>
+            </p>
+
+            <p class="fs-5 d-flex mb-2">
+              <span class="sql-query text-center fw-bold">table </span>
+              <span>: اسم الجدول المراد استرجاع البيانات منه. </span>
+            </p>
+
+            <p class="fs-5 d-flex mb-2">
+              <span class="sql-query text-center fw-bold">WHERE </span>
+              <span>: تستخدم للاعلان عن الشرط او الشروط.</span>
+            </p>
+
+            <p class="fs-5 d-flex mb-2">
+              <span class="sql-query text-center fw-bold">Condintions </span>
+              <span
+                >: الشرط او الشروط اللازمة لحصر البيانات الاتية من الجدول.</span
+              >
+            </p>
+
+            <p class="fs-5 d-flex mb-2">
+              <span class="sql-query text-center fw-bold">ORDER BY </span>
+              <span
+                >: تستخدم للاعلان عن كيفية ترتيب البيانات المسترجعة من
+                الجدول.</span
+              >
+            </p>
+
+            <p class="fs-5 d-flex mb-2">
+              <span class="sql-query text-center fw-bold">Column </span>
+              <span>: اسم الحقل او الحقول المراد الترتيب بها.</span>
+            </p>
+
+            <p class="fs-5 d-flex mb-2">
+              <span class="sql-query text-center fw-bold">; </span>
+              <span>: فاصلة منقوطة للاعلان عن نهاية الأمر.</span>
+            </p>
+          </section>
+
+          <section
+            id="reqiurments"
+            class="aside-section"
+            data-link="reqiurments"
+          >
+            <h3>متطلبات وارشادات كتابة جمل SQL:</h3>
+
+            <p class="ps-4 fs-5">
+              يوجد هناك بعض الارشادات التى يجب مراعاتها عند كتابة جملة SQL لتكون
+              الجملة صحيحة وقابلة للتنفيذ:
+            </p>
+
+            <ol class="fs-5">
+              <li class="mb-2">
+                يمكن كتابة مكونات جملة SQL بالاحرف الكبيرة او الصغيرة فهذا
+                لايؤثر على سلامة الجملة وذلك لأن جملة SQL غير حساسة للحروف.
+              </li>
+              <li class="mb-2">يفصل بين اسماء الحقول باستخدام الفاصلة ( ,).</li>
+              <li class="mb-2">
+                لايمكن فصل الكلمات المحجوزة للغة أو اختصارها، والكلمات المحجوزة
+                تسمى Keywords وهى مثل (select, from, where,………)
+              </li>
+              <li class="mb-2">
+                يفضل كتابة الجملة على أسطر ليسهل قراءتها وفهمها.
+              </li>
+              <li class="mb-2">لابد من الاعلان عن نهاية الجملة بواسطة (;)</li>
+            </ol>
+          </section>
+
+          <section id="select" class="aside-section" data-link="select">
+            <h3>استرجاع البيانات من الجدول بواسطة جملة SELECT</h3>
+
+            <div class="example-1">
+              <p class="ps-4 fs-5">
+                مثال (1): عرض جميع الحقول من جدول المستخدمين.
+              </p>
+
+              <pre
+                class="bg-dark text-white fit-content p-3 rounded-4 fw-bold mx-auto fs-6"
+              >
+SELECT * FROM `users`;
+</pre
+              >
+
+              <p class="fs-5">
+                فى هذا المثال نقوم بعرض جميع الحقول والبيانات الموجودة فى جدول
+                users الذى يحتوى على اربع اعمدة وذلك باستخدام الرمز(*) والذى
+                يعنى اظهار جميع حقول الجدول.
+              </p>
+            </div>
+
+            <div class="example-2">
+              <p class="ps-4 fs-5">مثال(2): عرض حقول معينة من جدول users.</p>
+
+              <pre
+                class="bg-dark text-white fit-content p-3 rounded-4 fw-bold mx-auto fs-6"
+              >
+<span class="text-success fw-bold">SELECT</span> `user_id`, `email` <span class="text-success fw-bold">FROM</span> `users`<span class="text-success fw-bold">;</span>
+</pre>
+
+              <p class="fs-5">
+                يوضح المثال السابق كيفية اظهار عدة حقول معينة من الجدول، ونلاحظ
+                هنا بأن اسماء الحقول يفصل بينها الفاصلة (,) فالمثال يعرض الرقم
+                والايميل.
+              </p>
+            </div>
+          </section>
+
+          <section id="alias" class="aside-section" data-link="alias">
+            <h3>استرجاع الحقول بأسماء مستعارة (Aliases):</h3>
+
+            <p class="ps-4 fs-5">
+              نستخدم طريقة الاسماء المستعارة عندما نريد اظهار الحقل باسم غير
+              اسمه الموجود فى الجدول وذلك لتوضيح معنى الحقل مثلا، وهناك ثلاث طرق
+              لإظهار الحقول بأسماء مستعارة:
+            </p>
+
+            <ol class="fw-bold">
+              <li>استخدام كلمة (AS) بين اسم الحقل والاسم المستعار.</li>
+              <li>استخدام المسافة(Space) بين اسم الحقل والاسم المستعار.</li>
+              <li>
+                استخدام علامة التنصيص المزدوجة التالية " " عندما يكون الاسم
+                المستعار أكثر من كلمة .
+              </li>
+            </ol>
+
+            <p class="fs-5">
+              مثال (3): عرض حقول بأسماء مستعارة من جدول المستخدمين.
+            </p>
+
+            <pre
+              class="bg-dark text-white fit-content p-3 rounded-4 fw-bold mx-auto fs-6"
+            >
+SELECT 
+<span class="text-success">`user_id` as user_number</span>,
+<span class="text-info">`email` as "electronic mail"</span>,
+<span class="text-success">`name` as "the name of user"</span>
+FROM `users`;
+</pre>
+
+            <p class="fs-5">
+              يوضح المثال السابق كيفية استخدام الطرق المختلفة لإظهار الحقول
+              باسماء مستعارة، فنلاحظ هنا ان اسم الحقل user_id قد ظهر فى النتيجة
+              باسم user number وهكذا بالنسبة للحقلين الاخرين.
+            </p>
+          </section>
+
+          <section id="math" class="aside-section" data-link="math">
+            <!-- <h3>استخدام العمليات الحسابية وأولويات تنفيذها مع جملة select:</h3> -->
+
+            <p class="ps-4 fs-5">
+              من الممكن اجراء عمليات حسابية على الحقول العددية للجصول على معلومة
+              معينة فمثلا اذا اردنا إظهار الموظفين ورواتبهم فى سنة فاننا نقوم
+              بضرب راتب كل موظف فى العدد 12 كما يلى (sal*12)، كذلك نريد اضافة
+              مبلغ 500 جنيه عليه. لاحظ أن العمليات الحسابية على الحقول لاتؤثر
+              على البيانات المخزنة داخل الجدول.
+            </p>
+
+            <ol class="fw-bold fs-5">
+              المعاملات الحسابية التى تستخدم فى العمليات الحسابية Arithmetic
+              operators:
+              <li>الجمع (+).</li>
+              <li>الطرح(-).</li>
+              <li>الضرب(*).</li>
+              <li>القسمة( /).</li>
+            </ol>
+
+            <p class="fs-5">
+              يمكن استخدام المعاملات الحسابية فى جميع أجزاء جملة SQL ماعدا الجزء
+              الخاص بـForm والامثلة التالية توضح كيفية إجراء العمليات الحسابية
+              على الحقول..
+            </p>
+
+            <p class="fs-5">
+              مثال (4): عرض رواتب الموظفين السنوية من جدول الموظفين.
+            </p>
+
+            <pre
+              class="bg-dark text-white fit-content p-3 rounded-4 fw-bold mx-auto fs-6"
+            >
+SELECT <span class="text-success">`name`, `salary`</span>, 
+<span class="text-info">salary * 12 as `sal`</span> FROM `emp`;
+</pre>
+
+            <p class="fs-5">
+              يبين المثال السابق كيفية استخدام العمليات الحسابية للحصول على
+              رواتب الموظفين السنوية وذلك بضرب راتب كل موظف فى 12 شهر.
+            </p>
+          </section>
+
+          <section
+            id="operator-precedence"
+            class="aside-section"
+            data-link="operator-precedence"
+          >
+            <h3>أولويات تنفيذ العوامل الحسابية operator precedence:</h3>
+
+            <p class="ps-4 fs-5">
+              عند إجراء عملية حسابية كبيرة على حقل من الحقول لابد أن تعرف كيفية
+              حسابها ولمعرفة ذلك لابد أن تعرف أولوية تنفيذ العوامل داخل جملة SQL
+              فهى تنفذ بالترتيب التالى:
+            </p>
+
+            <ol class="fw-bold fs-5">
+              <li>
+                أولوية تنفيذ العمليات الحسابية للضرب والقسمة ثم الجمع والطرح.
+              </li>
+              <li>العمليات من نفس الاولوية تنفذ من اليسار الى اليمين.</li>
+              <li>
+                عند وجود الاقواس فى العمليات الحسابية يكون ما بداخلها له
+                الاولوية.
+              </li>
+            </ol>
+
+            <p class="fs-5">لاحظ الفرق بين العمليتين التاليتين:</p>
+
+            <pre
+              class="bg-dark text-white fit-content p-3 rounded-4 fw-bold mx-auto fs-6"
+            >
+1- 100 * <span class="text-success">(40 + 10)</span> = 100 * 50 = 5000
+2- <span class="text-success">(100 * 40)</span> + 10 = 4000 + 10 = 4010</pre>
+          </section>
+
+          <section id="distinct" class="aside-section" data-link="distinct">
+            <h3>استخدام عبارة distinct لمنع تكرار السجلات:</h3>
+
+            <p class="ps-4 fs-5">
+              عند اظهار محتويات الجدول نجد تكرار بعض القيم للحقل الواحد دون
+              فائدة، فمثلا لو طلب منك معرفة ارقام المستخدمين الذين قاموا بصنع
+              البومات فى جدول الالبومات، فإنك بالطبع سوف تكتب هذا الأمر.
+            </p>
+
+            <pre
+              class="bg-dark text-white fit-content p-3 rounded-4 fw-bold mx-auto fs-6"
+            >
+<span class="text-success">SELECT</span> `user_id` <span class="text-success">FROM</span> `albums`</pre>
+
+            <p class="fs-5">
+              هذا الكود لإظهار حقل `user_id` لكل المستخدمين حتى وإن وجد تكرار
+              للبيانات
+            </p>
+
+            <p class="fs-5">
+              واذا اردنا منع هذا التكرار نستخدم كلمة (distinct) مباشرة بعد كلمة
+              select كما هو مبين فى المثال التالى:
+            </p>
+
+            <pre
+              class="bg-dark text-white fit-content p-3 rounded-4 fw-bold mx-auto fs-6"
+            >
+<span class="text-success">SELECT </span><span class="text-info">distinct</span> `user_id` <span class="text-success">FROM</span> `albums`</pre>
+          </section>
+
+          <section id="describe" class="aside-section" data-link="describe">
+            <h3>إظهار البناء الداخلى للجداول باستخدام الامر DESCRIBE(DESC)</h3>
+
+            <p class="ps-4 fs-5">
+              لإظهار معلومات حول اسماء الحقول وانواعها الموجودة فى جدول معين أى
+              اظهار البناء الداخلى للجدول نستخدم الامر (DESCRIBE) والذى يمكن
+              اختصاره الى الاحرف التالية (DESC)
+            </p>
+
+            <img
+              src="/assets/images/describe.jpg"
+              alt="describe-sql-query"
+              class="describe-img-query mb-2"
+            />
+
+            <p class="fs-5">
+              فى المثال السابق تم اظهار أسماء الحقول الموجودة فى جدول الالبومات
+              وأنواعها وبعض المعلومات الخاصة بكل حقل مثل: هل هو نصى أو تاريخ أو
+              رقم؟ وماهو طوله؟
+            </p>
+          </section>
+
+          <section id="null" class="aside-section" data-link="null">
+            <h3>التعامل مع القيمة NULL</h3>
+
+            <p class="ps-4 fs-5">
+              ماذا تعنى القيمة NULL ، هذه القيمة تسمى قيمة غير معروفة أو قيمة
+              خاوية بمعنى انها لا تساوى الصفر ولا مسافة ولا أى رقم أو نص، فمثلا
+              هناك حقل فى جدول الموظفين اسمه comm. هذا الحقل يخزن به قيمة تكليف
+              الموظف بمهمة أو تكليفة بعمل اضافى يأخذ عليه أجر، فهناك موظفون
+              يأخذون بدل تكليف وموظفون لايمكن تكليفهم اى لايأخذون بدل تكليف
+              اطلاقا وفى هذه الحالة يتم ترك حقل التكليف comm. خاليا ليس به اى
+              قيمة ونطلق على القيمة الخالية هذه NULL.
+            </p>
+
+            <img
+              src="/assets/images/null.jpg"
+              alt="null-sql-query"
+              class="img-query mb-2"
+            />
+
+            <p class="fs-5">
+              يمكنك ان تلاحظ الموظف tamer لايأخذ بدل تكليف ولذلك تركت قيمة comm.
+              خالية.وعند اجراء اى عملية حسابية عليها يكون الناتج دائما (قيمة
+              خالية null)
+            </p>
+          </section>
+
+          <section
+            id="show-activity"
+            class="aside-section"
+            data-link="show-activity"
+          ></section>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/main.js" type="module"></script>
+    <script src="/js/header.js"></script>
+    <script src="/js/module.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
+    <link rel="stylesheet" href="/css/test.css" />
+
+    <title>SQL Test</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="introduction p-3 p-md-4 bg-white mx-auto shadow-lg">
+        <h1 class="text-center mb-4" aria-label="تعليمات الاختبار">
+          تعليمات الاختبار
+        </h1>
+        <div class="instructions">
+          <h3>عزيزى الطالب :</h3>
+          <p class="fs-5 text-indent">
+            يهدف هذا الاختبار إلى قياس خبرة الطالب السابقة المرتبطة بمهارات
+            برمجة قواعد البيانات .
+          </p>
+
+          <h3>بناء الاختبار :</h3>
+          <p class="fs-5 text-indent">
+            يتكون الاختبار من (<span id="questions-count"></span>) مفردة من نوع
+            الاختيار من متعدد، كل مفردة تشتمل على رأس السؤال وأربع بدائل لفظية
+            للإجابة ، من بينهم بديل واحد يمثل الإجابة الصحيحة.
+          </p>
+
+          <h3>تعليمات الإجابة علي الاختبار :</h3>
+          <ul class="fs-5">
+            <li>إقرأ كل سؤال بعناية ، وكذلك الاختيارات المتعددة .</li>
+            <li>اختر الإجابة التي تراها مناسبة لكل سؤال .</li>
+            <li>تأكد قبل الانتهاء من الاختبار انك أجبت علي جميع الأسئلة .</li>
+          </ul>
+        </div>
+
+        <button
+          id="start-quiz"
+          class="px-3 rounded-4 fw-bold fs-5 btn btn-success d-block mx-auto mt-5"
+          aria-label="بدأ الاختبار"
+        >
+          بدأ الاختبار
+        </button>
+      </div>
+
+      <div class="app p-4 bg-white mx-auto shadow-lg d-none">
+        <h2
+          class="border-bottom border-3 border-dark pb-4 mb-5 fit-content"
+          aria-label="اختبار الخبره السابقه"
+        >
+          اختبار الخبره السابقه
+        </h2>
+
+        <div id="error-message" class="text-danger text-center mb-3"></div>
+
+        <div class="quiz">
+          <h4 id="question" class="mb-4" aria-label="السؤال الحالي"></h4>
+          <div id="answers" class="answers"></div>
+
+          <div class="d-flex justify-content-between mt-4">
+            <button
+              id="next"
+              class="btn btn-primary fs-5"
+              aria-label="السؤال التالي"
+            >
+              التالي
+            </button>
+            <button
+              id="submit"
+              class="btn btn-success d-none fs-5"
+              aria-label="إرسال الإجابات"
+            >
+              إرسال
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/test.js" type="module"></script>
+  </body>
+</html>
