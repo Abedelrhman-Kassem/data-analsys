@@ -27,7 +27,10 @@ getPreTest();
 
 async function getPreTest() {
   try {
-    const response = await fetch(`http://localhost:3000/api/pretest`);
+    // const response = await fetch(`http://localhost:3000/api/pretest`);
+    const response = await fetch(
+      `https://graduation-project-production-36b6.up.railway.app/api/pretest`
+    );
     const responseData = await response.json();
 
     if (!response.ok) {
@@ -90,11 +93,15 @@ function putDataOnScreen(data) {
 
 submitBtn.addEventListener("click", async () => {
   try {
-    const response = await fetch("http://localhost:3000/api/pretest", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(answerData),
-    });
+    // const response = await fetch("http://localhost:3000/api/pretest", {
+    const response = await fetch(
+      "https://graduation-project-production-36b6.up.railway.app/api/pretest",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(answerData),
+      }
+    );
 
     const responseData = await response.json();
 

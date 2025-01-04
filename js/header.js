@@ -61,7 +61,7 @@ const header = `
                     >
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link text-white fs-5 fw-bold" href="/view/connect.html"
+                    <a class="nav-link text-white fs-5 fw-bold" href="/view/contact.html"
                     >اتصل بنا</a
                     >
                 </li>
@@ -95,7 +95,10 @@ async function getModules() {
     return;
   }
   try {
-    const response = await fetch("http://localhost:3000/api/modules");
+    // const response = await fetch("http://localhost:3000/api/modules");
+    const response = await fetch(
+      "https://graduation-project-production-36b6.up.railway.app/api/modules"
+    );
 
     const responseData = await response.json();
 

@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/css/bootstrap.rtl.min.css" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/header.css" />
-    <link rel="stylesheet" href="/css/connect.css" />
+    <link rel="stylesheet" href="/css/contact.css" />
 
     <title>تواصل معنا</title>
   </head>
@@ -31,28 +31,39 @@
                 <input
                   type="text"
                   name="username"
+                  id="username"
                   placeholder="اكتب أسمك هنا"
                   autocomplete="off"
+                  required
                 />
+
                 <input
                   type="text"
                   name="mobile"
+                  id="phone"
                   placeholder="اكتب رقم هاتفك"
                   autocomplete="off"
+                  required
                 />
+
                 <input
                   type="email"
                   name="email"
+                  id="email"
                   placeholder="اكتب بريدك  الإلكترونى"
                   autocomplete="off"
+                  required
                 />
+
                 <textarea
                   name="message"
-                  id=""
+                  id="message"
                   cols="50"
                   rows="10"
                   placeholder="اكتب رسالتك..."
+                  required
                 ></textarea>
+
                 <input
                   class="button"
                   type="submit"
@@ -69,5 +80,6 @@
     <script src="/js/bootstrap.bundle.min.js"></script>
     <script src="/js/main.js" type="module"></script>
     <script src="/js/header.js"></script>
+    <script src="/js/contact.js"></script>
   </body>
 </html>
