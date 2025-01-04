@@ -41,6 +41,7 @@ async function login(url, data) {
     const responseData = await response.json();
 
     if (!response.ok) {
+      console.log(responseData);
       throw responseData.error;
     }
 
