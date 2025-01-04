@@ -50,11 +50,7 @@ const header = `
                         
                     </ul>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white fs-5 fw-bold" href="/view/chatbot.html"
-                    >شات بوت</a
-                    >
-                </li>
+              
                 <li class="nav-item">
                     <a class="nav-link text-white fs-5 fw-bold" href="/view/activity_instructions.html"
                     >تعليمات الأنشطه</a
