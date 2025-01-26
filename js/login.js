@@ -28,7 +28,11 @@ form.addEventListener("submit", (e) => {
   );
 });
 
+let isLoading = false;
+
 async function login(url, data) {
+  if (isLoading) return;
+  isLoading = true;
   try {
     const response = await fetch(url, {
       method: "POST",
@@ -57,6 +61,8 @@ async function login(url, data) {
   } catch (error) {
     const apiValidationDiv = document.getElementById("api-validation");
     apiValidationDiv.innerText = error;
+  } finally {
+    isLoading = false;
   }
 }
 

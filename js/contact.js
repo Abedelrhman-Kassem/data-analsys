@@ -6,8 +6,13 @@ const data = {
   studentId,
 };
 
+let isLoading = false;
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+
+  if (isLoading) return;
+  isLoading = true;
 
   data.name = document.getElementById("username").value;
   data.phone = document.getElementById("phone").value;
@@ -35,5 +40,7 @@ form.addEventListener("submit", async (e) => {
   } catch (error) {
     console.error("Error submitting answers:", error);
     alert("حدث خطأ أثناء الإرسال. الرجاء المحاولة مرة أخرى.");
+  } finally {
+    isLoading = false;
   }
 });

@@ -202,8 +202,11 @@ function createSendActivityBtn() {
   return btn;
 }
 
+let loadingSendTrueFalse = false;
 async function sendTrueFalseActivities() {
+  if (loadingSendTrueFalse) return;
   if (!validateTrueFalseAnswers()) return;
+  loadingSendTrueFalse = true;
 
   try {
     const response = await fetch(
@@ -229,6 +232,8 @@ async function sendTrueFalseActivities() {
   } catch (error) {
     alert("حدث خطأ أثناء الإرسال حاول فى وقت لاحق");
     console.log(error.error);
+  } finally {
+    loadingSendTrueFalse = false;
   }
 }
 
@@ -290,7 +295,12 @@ function validateSqlActivity(id) {
   return input.value.trim();
 }
 
+let loadingSendSqlActivity = false;
+
 async function sendSqlActivity(data) {
+  if (loadingSendSqlActivity) return;
+  loadingSendSqlActivity = true;
+
   try {
     let response = await fetch(
       // `http://localhost:3000/api/activities/moduleId/${moduleId}/sql_input`,
@@ -314,6 +324,8 @@ async function sendSqlActivity(data) {
   } catch (error) {
     console.log(error);
     alert("حدثت مشكله أثناء الإرسال حاول مره أخري");
+  } finally {
+    loadingSendSqlActivity = false;
   }
 }
 

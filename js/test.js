@@ -91,7 +91,10 @@ function putDataOnScreen(data) {
   });
 }
 
+let isLoading = false;
 submitBtn.addEventListener("click", async () => {
+  if (isLoading) return;
+  isLoading = true;
   try {
     // const response = await fetch("http://localhost:3000/api/pretest", {
     const response = await fetch(
@@ -113,5 +116,7 @@ submitBtn.addEventListener("click", async () => {
   } catch (error) {
     console.error("Error submitting answers:", error);
     alert("حدث خطأ أثناء إرسال الإجابات. الرجاء المحاولة مرة أخرى.");
+  } finally {
+    isLoading = false;
   }
 });
