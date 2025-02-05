@@ -7,7 +7,7 @@ const header = `
     <div class="container-fluid container-xl px-md-0">
         <a class="navbar-brand text-white fs-5 fw-bold" href="/"
             ><img
-            src="/assets/images/sql-logo.png"
+            src="/assets/images/data (1).png"
             alt="sql-logo"
             class="sql-logo d-block d-md-none d-xl-block"
         /></a>
@@ -91,10 +91,10 @@ async function getModules() {
     return;
   }
   try {
-    // const response = await fetch("http://localhost:3000/api/modules");
-    const response = await fetch(
-      "https://graduation-project-production-36b6.up.railway.app/api/modules"
-    );
+    const response = await fetch("http://localhost:3000/api/modules");
+    // const response = await fetch(
+    //   "https://graduation-project-production-36b6.up.railway.app/api/modules"
+    // );
 
     const responseData = await response.json();
 

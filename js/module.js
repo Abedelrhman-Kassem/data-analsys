@@ -33,12 +33,12 @@ async function getActivities(moduleId) {
   }
 
   try {
-    // const response = await fetch(
-    //   `http://localhost:3000/api/activities/filter/moduleId/${moduleId}?student_id=${studentId}`
-    // );
     const response = await fetch(
-      `https://graduation-project-production-36b6.up.railway.app/api/activities/filter/moduleId/${moduleId}?student_id=${studentId}`
+      `http://localhost:3000/api/activities/filter/moduleId/${moduleId}?student_id=${studentId}`
     );
+    // const response = await fetch(
+    //   `https://graduation-project-production-36b6.up.railway.app/api/activities/filter/moduleId/${moduleId}?student_id=${studentId}`
+    // );
 
     const responseData = await response.json();
 
@@ -210,8 +210,8 @@ async function sendTrueFalseActivities() {
 
   try {
     const response = await fetch(
-      // `http://localhost:3000/api/activities/moduleId/${moduleId}/true_false`,
-      `https://graduation-project-production-36b6.up.railway.app/api/activities/moduleId/${moduleId}/true_false`,
+      `http://localhost:3000/api/activities/moduleId/${moduleId}/true_false`,
+      // `https://graduation-project-production-36b6.up.railway.app/api/activities/moduleId/${moduleId}/true_false`,
       {
         headers: {
           "Content-Type": "application/json",
@@ -303,8 +303,8 @@ async function sendSqlActivity(data) {
 
   try {
     let response = await fetch(
-      // `http://localhost:3000/api/activities/moduleId/${moduleId}/sql_input`,
-      `https://graduation-project-production-36b6.up.railway.app/api/activities/moduleId/${moduleId}/sql_input`,
+      `http://localhost:3000/api/activities/moduleId/${moduleId}/sql_input`,
+      // `https://graduation-project-production-36b6.up.railway.app/api/activities/moduleId/${moduleId}/sql_input`,
       {
         headers: {
           "Content-type": "application/json",

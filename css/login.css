@@ -3,11 +3,24 @@
 }
 
 body {
-  background-color: #0dcaf040 !important;
+  background-color: #e5f5fc !important;
+}
+
+.logo-img {
+  max-width: 150px;
 }
 
 .container {
   height: 100vh;
+}
+
+.data-logo {
+  width: fit-content;
+  font-family: "TT Slabs", serif;
+  color: #005d85;
+  font-weight: bold;
+  font-size: 50px;
+  text-decoration: none;
 }
 
 form,
