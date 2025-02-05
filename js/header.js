@@ -33,7 +33,7 @@ const header = `
                     class="nav-link active text-white fs-5 fw-bold"
                     aria-current="page"
                     href="/"
-                    >الصفحه الرئيسيه</a
+                    >الصفحة الرئيسية</a
                     >
                 </li>
                 <li class="nav-item dropdown">
@@ -53,7 +53,7 @@ const header = `
               
                 <li class="nav-item">
                     <a class="nav-link text-white fs-5 fw-bold" href="/view/activity_instructions.html"
-                    >تعليمات الأنشطه</a
+                    >تعليمات الأنشطة</a
                     >
                 </li>
                 <li class="nav-item">
