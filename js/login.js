@@ -21,11 +21,11 @@ form.addEventListener("submit", (e) => {
     password: passwordInput.value.trim(),
   };
 
-  login("http://localhost:3000/api/login", data);
-  // login(
-  //   "https://graduation-project-production-36b6.up.railway.app/api/login",
-  //   data
-  // );
+  // login("http://localhost:3000/api/login", data);
+  login(
+    "https://graduation-project-production-36b6.up.railway.app/api/login",
+    data
+  );
 });
 
 let isLoading = false;

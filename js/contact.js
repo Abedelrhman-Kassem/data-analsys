@@ -21,8 +21,8 @@ form.addEventListener("submit", async (e) => {
 
   try {
     const response = await fetch(
-      "http://localhost:3000/api/contact",
-      // "https://graduation-project-production-36b6.up.railway.app/api/contact",
+      // "http://localhost:3000/api/contact",
+      "https://graduation-project-production-36b6.up.railway.app/api/contact",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

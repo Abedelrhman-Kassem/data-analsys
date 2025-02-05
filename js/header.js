@@ -91,10 +91,10 @@ async function getModules() {
     return;
   }
   try {
-    const response = await fetch("http://localhost:3000/api/modules");
-    // const response = await fetch(
-    //   "https://graduation-project-production-36b6.up.railway.app/api/modules"
-    // );
+    // const response = await fetch("http://localhost:3000/api/modules");
+    const response = await fetch(
+      "https://graduation-project-production-36b6.up.railway.app/api/modules"
+    );
 
     const responseData = await response.json();
 

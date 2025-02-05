@@ -29,11 +29,11 @@ form.addEventListener("submit", (e) => {
     code: codeInput.value.trim(),
   };
 
-  register("http://localhost:3000/api/signup", data);
-  // register(
-  //   "https://graduation-project-production-36b6.up.railway.app/api/signup",
-  //   data
-  // );
+  // register("http://localhost:3000/api/signup", data);
+  register(
+    "https://graduation-project-production-36b6.up.railway.app/api/signup",
+    data
+  );
 });
 
 let isLoading = false;
